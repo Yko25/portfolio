@@ -8,66 +8,147 @@
 <title>YURIKO KIKUCHI | Portfolio</title>
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--TOPに戻るボタン-->
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+
+<script>
+$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('.btnHamburger').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+    $('.btnHamburger,#coverlayer,nav').toggleClass('is-active');　//.is-activeを付ける・外す
+  });
+});
+</script>
+
+<script>
+$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('nav ul li a').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+    $('.btnHamburger,#coverlayer,nav').removeClass('is-active');　//.is-activeを付ける・外す
+  });
+});
+</script>
+
+<script>
+$(function(){
+$("#acMenu dt").on("click", function() {
+$(this).next().slideToggle();
+});
+});
+</script>
+
 </head>
 
 <body>
 <div id="wrapper">
   <header>
-    <h1>Yuriko Kikuchi</h1>
+    <h1><a href="index.html">Yuriko Kikuchi</a></h1>
+    <div class="btnHamburger">
+        <span class="line line_01"></span>
+        <span class="line line_02"></span>
+        <span class="line line_03"></span>
+    </div>
     <nav>
-      <div id="nav_link">
-        <div>EN / JP</div>
-        <div>contact</div>      
-      </div>
+      <!--<div id="nav_link">
+        <div>EN / JP</div>    
+      </div>-->
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="profile.html">Profile</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+    <div id="coverlayer"></div>
   </header>
-  <div id="top_main"><img src="images/topmain.jpg" width="6240" height="4160" alt=""/></div>
+  <div id="top_main">
+    <div class="box" id="makeImg">
+        <picture>
+          <source media="(max-width:599px)" srcset="images/index_topmain@600.jpg 2x,images/index_topmain@600.jpg 3x">
+          <source media="(min-width:600px)" srcset="images/index_topmain@1200.jpg 2x">
+          <img src="images/index_topmain@1200.jpg"  alt="トップイメージ写真"/>
+        </picture>
+    </div>
+        <p><span id="mainimg-text">Portfolio</span></p>
+        <p>Thank you for visiting my portfolio website.</p>
+  </div>
   <main>
-    <article>
+    <article class="work">
+    <h2>Work</h2>
       <section>
-        <div>workのスクリーンキャプチャ1</div>
+        <div class="devices">
+        <div class="box">
+          <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+              </picture>
+              <div class="phone">
+              <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+              </picture>
+              </div>
+            
+            <div class="tablet">
+              <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+                </picture>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div class="work_text">
         <h1>TracKeys（採用サイト）</h1>
-        <p>webサイト</p>
-        <p>サイト有り</p>
-      </section>
-      <section>
-        <div>workのスクリーンキャプチャ2</div>
-        <h1>Vegenola（カフェサイト）</h1>
-        <p>webサイト</p>
-        <p>サイト有り</p>
-      </section>
-      <section>
-        <div>workのスクリーンキャプチャ3</div>
-        <h1>ポートフォリオサイト</h1>
-        <p>webサイト</p>
-        <p>サイト有り</p>
-      </section>
-      <section>
-        <div>workのスクリーンキャプチャ4</div>
-        <h1>アプリUIまとめ</h1>
-        <p>UIデザイン</p>
-      </section>
-      <section>
-        <div>workのスクリーンキャプチャ5</div>
-        <h1>（プロダクトLP）</h1>
-        <p>webサイト</p>
-        <p>デザインカンプ </p>
-      </section>
-      <section>
-        <div>workのスクリーンキャプチャ6</div>
-        <h1>（ECサイト）</h1>
-        <p>webサイト</p>
-        <p>デザインカンプ </p>
+        <p>WEBサイト（PC/タブレット/モバイル）</p>
+        <p>仮想サイト</p>
+        <p>※サイト有り</p>
+        </div>
+        <div class="more"><a href="work.html">作品一覧<img src="images/arrow.svg" alt="矢印"/></a></div>
       </section>
     </article>
     <article>
+    <h2>Profile</h2>
       <section>
-        <h1>Contact</h1>
-        <p>感想やフィードバック等いただけると嬉しいです。</p>
+            <div id="index_profile">
+                <picture>
+                  <source media="(max-width:599px)" srcset="images/index_profile@600.jpg 2x,images/index_profileo@600.jpg 3x">
+                  <source media="(min-width:600px)" srcset="images/index_profile@1200.jpg 2x">
+                  <img src="images/index_profile@1200.jpg"  alt="プロフィール写真"/>
+                </picture>
+            </div>
+            <h1>菊池　百里子（きくち　ゆりこ）</h1>
+            <p>WEBデザイナー</p>
+            <p>愛媛県生まれ。関西大学経済学部卒業。これまで、留学準備支援や海外生活支援、転職支援などで、決断のサポート・課題解決に尽力してきた。今後はWEBデザイナーとして、デザインでクライアントの”イメージを形に”し、WEBサイトという”きっかけ”からクライアントの課題解決を実現したいと思い、東京デザインプレックス研究所にて、WEBデザインの基礎を学び、転職活動中。</p>
+            <div class="more"><a href="profile.html">詳細<img src="images/arrow.svg" alt="矢印"/></a></div>
+      </section>
+    </article>
+    <article>
+    <h2>Contact</h2>
+      <section>
+      <p>ご意見・ご感想等ございましたら、下記E-mailアドレス、もしくはコンタクトフォームよりご連絡ください。</p>
+       <p>yurikok.jp@gmail.com</p>
         <form action="check.php" method="post" id="contact">
           <dl>
             <dt>お名前<span> *</span></dt>
@@ -79,11 +160,13 @@
             <dt>メッセージ</dt>
             <dd><textarea input type="text" value="" ols="100" rows="10" name="contact" required></textarea></dd>
             </dl>
-          <input type="submit" value="送信">
+          <input type="submit" value="Submit">
           </form>
         </section>
     </article>
   </main>
+  <footer><small>©2020Yuriko Kikuchi All rights reserved.</small></footer>
+  <p class="pagetop"><a href="#top"><img src="images/top.svg" alt="トップへ戻る"/></a></p>
 </div>
 </body>
 </html>
