@@ -21,6 +21,15 @@ body {
 	line-height: 1;
 }
 
+button{
+    background: unset;
+    border: none;
+}
+
+button:active{
+    border: none;
+}
+
 ol, ul {
 	list-style: none;
 }

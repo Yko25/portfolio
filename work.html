@@ -2,9 +2,454 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>無題ドキュメント</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>YURIKO KIKUCHI | Portfolio</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--TOPに戻るボタン-->
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+  var pagetopModal = $('.pagetopModal');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetopModal.fadeIn();
+       } else {
+            pagetopModal.fadeOut();
+            }
+       });
+       
+       pagetopModal.click(function () {
+        console.log("test");
+           $('#trackeysModal').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+
+<script>
+$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('.btnHamburger').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+    $('.btnHamburger,#coverlayer,nav').toggleClass('is-active');　//.is-activeを付ける・外す
+  });
+});
+</script>
+
+<script>
+$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('nav ul li a').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+    $('.btnHamburger,#coverlayer,nav').removeClass('is-active');　//.is-activeを付ける・外す
+  });
+});
+</script>
+
+<!--モーダルウィンドウのフェードイン-->
+<script>
+$(function () {
+  $('.openModal').click(function(){
+      $('.modalArea').fadeIn();
+      $(this).blur();
+  });
+  $('.closeModal , .modalBg').click(function(){
+    $('.modalArea').fadeOut();
+  });
+});
+</script>
+
 </head>
 
-<body>
+<body id="work">
+<div id="wrapper">
+  <header>
+    <h1><a href="index.html">Yuriko Kikuchi</a></h1>
+    <div class="btnHamburger">
+        <span class="line line_01"></span>
+        <span class="line line_02"></span>
+        <span class="line line_03"></span>
+    </div>
+    <nav>
+      <!--<div id="nav_link">
+        <div>EN / JP</div>    
+      </div>-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="mailto:yurikok.jp@gmail.com">Mail</a></li>
+      </ul>
+    </nav>
+    <div id="coverlayer"></div>
+  </header>
+<div id="top_main">
+    <div class="box">
+        <picture>
+          <source media="(max-width:599px)" srcset="images/work_topmain@600.jpg 2x,images/work_topmain@600.jpg 3x">
+          <source media="(min-width:600px)" srcset="images/work_topmain@1200.jpg 2x">
+          <img src="images/work_topmain@1200.jpg"  alt="トップイメージ写真"/>
+        </picture>
+    </div>
+        <p><span id="mainimg-text">Work</span></p>
+  </div>
+  <main>
+    <article class="work">
+      <section>
+        <div class="devices">
+        <div class="boxright"></div>
+        <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+            </picture>
+        <div class="phone">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+            </picture>
+        </div>
+        <div class="tablet">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+            </picture>
+        </div>
+        </div>
+        </div>
+        <div class="work_text">
+            <h1>TracKeys（採用サイト）</h1>
+            <p>WEBサイト（PC/タブレット/モバイル）</p>
+            <p>仮想サイト</p>
+            <p>※サイト有り</p>
+        </div>
+        <div class="more">
+            <ul>
+            <button class="openModal">
+            <li>作品詳細</li>
+            <li>
+                <img src="images/arrow.svg" alt="矢印"/>
+            </li>
+            </button>
+            </ul>
+        </div>
+       <section class="modalArea">
+       <div class="closeModal">×</div>
+       <div id="top1"></div>
+       <div class="modalBg"></div>
+            <div id="trackeysModal" class="modalWrapper">
+            <div class="modalContents" id="trackeys">
+        <div class="devices">
+        <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+            </picture>
+        <div class="phone">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+            </picture>
+        </div>
+        <div class="tablet">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+            </picture>
+        </div>
+        </div>
+        </div>
+        <main>
+        <article>
+        <h2><img src="images/logo_trackeys.svg" alt="TracKeysのロゴ"/></h2>
+            <section>
+                    <h1>アパレル業界特化型の人材紹介会社の採用サイト</h1>
+                    <p>※仮想サイト</p>
+      <h2>媒体</h2>
+      <p>WEBサイト（PC/タブレット/モバイル）</p>
+      <h2>URL</h2>
+      <p><a href="#">trackeys.recruite</a></p>
+      <h2>対応範囲</h2>
+      <p>デザイン / カンプ制作 / レイアウト / 画像補正 / コーディング</p>
+      <h2>制作期間</h2>
+      <p>約40時間</p>
+      <h2>使用ツール</h2>
+      <p>Illustrator / Photoshop / Dreamweaver / HTML / CSS / jQuery</p>
+      <h2>サイトの目的・コンセプト</h2>
+      <p>採用サイト外での採用活動の効果最大化</p>
+      <ul>
+        <li>求職者に応募企業候補に入れてもらう</li>
+        <li>求職者の志望度向上</li>
+        <li>企業・仕事の理解</li>
+      </ul>
+      <h2>ターゲット</h2>
+      <p>アパレル業界からのキャリアチェンジ</p>
+      <p>他人材紹介会社からの転職</p>
+      </section>
+      <section>
+      <h1>制作フロー</h1>
+      <ol>
+        <li>競合サイト調査</li>
+        <li>ペルソナ策定</li>
+        <li>サイトマップ 作成</li>
+        <li>デザインラフ作成</li>
+        <li>コーディング</li>
+      </ol>
+      <h2>1. 競合サイト調査</h2>
+      <p>人材紹介会社の採用サイトを10社程調査。特化型大手総合型人材紹介会社の子会社が多く、独立型企業でも企業サイト内に1ページで求人票を掲載しているのみ。</p>
+      <h2>2. ペルソナ策定</h2>
+      <ul>
+      <li>28歳女性</li>
+      <li>アパレル販売員</li>
+      <li>明るく社交的で献身的。</li>
+      <li>友人いるときはどちらかというと聞き役に徹することが多い。</li>
+      <li>友人は多いが、結婚して家庭を優先する人が増えてきた。</li>
+      <li>仕事は楽しいが、長時間、立ち仕事ということもあり、販売員としてのキャリアに不安を感じている。</li>
+      <li>よく使用するデバイス：iPhone</li>
+      <li>趣味：買い物、旅行、友人との飲み会</li>
+      </ul>
+      <h2>3. サイトマップ作成</h2>
+      <p>採用サイトは動きの多い派手な傾向があるが、忙しい仕事の合間など、移動中に携帯でみることを想定、より多くの情報を伝えることを重視し、シングルページでシンプルな構造に。また、採用選考の参考になり、かつ面接で言語化しやすいよう文章中心のサイト構成に。</p>
+      <img src="images/trackeys_sitemap.svg" alt="TracKeysサイトマップ"/>
+      <h2>4. ラフデザイン作成</h2>
+      <p>あらゆるアパレルブランドの雰囲気に適応するよう、汎用性のあるシンプルなデザインに。</p>
+      <ul>
+      <li>シンプル</li>
+      <li>誠実さ</li>
+      <li>落ち着き</li>
+      </ul>
+      <h2>カラー</h2>
+      <div class="colorBox">
+      <ul>
+      <li><div class="box1"></div><p>#3777FF</p></li>
+      <li><div class="box2"></div><p>#DAB300</p></li>
+      <li><div class="box3"></div><p>#E0E0E0</p></li>
+      </ul>
+      </div>
+      <h3>UI</h3>
+      <p>エントリーボタンの配置</p>
+      <p>右手で携帯を持つことを想定し、親指で押しやすいようエントリーボタンは画面右下に配置。また直接応募するためにサイトに訪問した際、最少動作ですむよう、固定配置</p>
+      <h3>その他</h3>
+      <p>トップメイン画像にターゲットの女性を起用モノクロ画像にすることで洗練された印象に。</p>
+      <h2>5. コーディング</h2>
+      <p>コメントを記載することで、記述内容を理解しやすいようにした。</p>
+      <p>可能な限り画像ではなくCSSで実装し、検索にひっかかりやすいようにした。</p>
+      </section>
+    </article>
+    <div class="capture">
+        <picture class="pccap">
+        <h2>PCサイト</h2>
+          <source media="(max-width:599px)" srcset="images/trackeys_full_pc@990.jpg 2x,images/trackeys_full_pc@1980.jpg 3x">
+          <source media="(min-width:600px)" srcset="images/trackeys_full_pc@1980.jpg 2x">
+          <img src="images/trackeys_full_pc@1980.jpg"  alt="PCサイトスクリーンキャプチャ"/>
+        </picture>
+        <picture class="tabcap">
+        <h2>タブレットサイト</h2>
+          <source media="(max-width:599px)" srcset="images/trackeys_full_tablet@540.jpg 2x,images/trackeys_full_pc@1080.jpg 3x">
+          <source media="(min-width:600px)" srcset="images/trackeys_full_pc@1080.jpg 2x">
+          <img src="images/trackeys_full_tablet@1080.jpg"  alt="タブレットサイトスクリーンキャプチャ"/>
+        </picture>
+        <picture class="phonecap">
+        <h2>モバイルサイト</h2>
+          <source media="(max-width:599px)" srcset="images/trackeys_full_phone.jpg 2x,images/trackeys_full_phone.jpg 3x">
+          <source media="(min-width:600px)" srcset="images/trackeys_full_phone.jpg 2x">
+          <img src="images/trackeys_full_phone.jpg"  alt="モバイルサイトスクリーンキャプチャ"/>
+        </picture>
+    </div>
+</main>
+            </div>
+ 
+            </div>
+        <p class="pagetopModal"><a href="#"><img src="images/top.svg" alt="トップへ戻る"/></a></p>
+        </section>
+        </section>
+            <section>
+        <div class="devices">
+        <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+            </picture>
+        <div class="phone">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+            </picture>
+        </div>
+        <div class="tablet">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+            </picture>
+        </div>
+        </div>
+        </div>
+        <div class="work_text">
+        <h1>TracKeys（採用サイト）</h1>
+        <p>WEBサイト（PC/タブレット/モバイル）</p>
+        <p>仮想サイト</p>
+        <p>※サイト有り</p>
+        </div>
+        <div class="more">
+            <ul>
+            <a href="#">
+            <li>作品詳細</li>
+            <li><img src="images/arrow.svg" alt="矢印"/></li>
+            </a>
+            </ul>
+        </div>
+      </section>
+      <section>
+        <div class="devices">
+        <div class="boxleft"></div>
+        <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+            </picture>
+        <div class="phone">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+            </picture>
+        </div>
+        <div class="tablet">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+            </picture>
+        </div>
+        </div>
+        </div>
+        <div class="work_text">
+        <h1>TracKeys（採用サイト）</h1>
+        <p>WEBサイト（PC/タブレット/モバイル）</p>
+        <p>仮想サイト</p>
+        <p>※サイト有り</p>
+        </div>
+        <div class="more">
+            <ul>
+            <a href="#">
+            <li>作品詳細</li>
+            <li><img src="images/arrow.svg" alt="矢印"/></li>
+            </a>
+            </ul>
+        </div>
+      </section>
+      <section>
+        <div class="devices">
+        <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+            </picture>
+        <div class="phone">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+            </picture>
+        </div>
+        <div class="tablet">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+            </picture>
+        </div>
+        </div>
+        </div>
+        <div class="work_text">
+        <h1>TracKeys（採用サイト）</h1>
+        <p>WEBサイト（PC/タブレット/モバイル）</p>
+        <p>仮想サイト</p>
+        <p>※サイト有り</p>
+        </div>
+        <div class="more">
+            <ul>
+            <a href="#">
+            <li>作品詳細</li>
+            <li><img src="images/arrow.svg" alt="矢印"/></li>
+            </a>
+            </ul>
+        </div>
+      </section>
+      <section>
+        <div class="devices">
+        <div class="boxright"></div>
+        <div class="pc">
+            <picture>
+              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
+              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
+              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+            </picture>
+        <div class="phone">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
+                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
+            </picture>
+        </div>
+        <div class="tablet">
+            <picture>
+                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
+                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
+                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
+            </picture>
+        </div>
+        </div>
+        </div>
+        <div class="work_text">
+        <h1>TracKeys（採用サイト）</h1>
+        <p>WEBサイト（PC/タブレット/モバイル）</p>
+        <p>仮想サイト</p>
+        <p>※サイト有り</p>
+        </div>
+        <div class="more">
+            <ul>
+            <a href="#">
+            <li>作品詳細</li>
+            <li><img src="images/arrow.svg" alt="矢印"/></li>
+            </a>
+            </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer><small>©2020Yuriko Kikuchi All rights reserved.</small></footer>
+  <p class="pagetop"><a href="#top"><img src="images/top.svg" alt="トップへ戻る"/></a></p> <!--Main page -->
+</div>
 </body>
 </html>

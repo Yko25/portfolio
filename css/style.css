@@ -4,7 +4,7 @@
 body{
     font-size: 16px;
     color: #707070;
-    line-height: 1.5;
+    line-height: 2;
     font-family:'Hoefler Text', 'Hoefler Text Black', 'Hoefler Text Italic', "serif";
     background: #FCE7D7;
     -webkit-text-size-adjust:100%;
@@ -19,6 +19,12 @@ img{
 	width: 100%;
 	margin: 0 auto;
     overflow-x: hidden;
+}
+
+.text{
+    position: relative;
+    z-index: 2;
+    padding: 0 1.333%;
 }
 
 header,#nav_link,nav ul{
@@ -195,29 +201,26 @@ nav.is-active{
     z-index: 2;
 }
 
-main{
-    padding: 1.3333%;
-}
-
 article h2, #top_main #mainimg-text{
     font-size: 45px;
     font-weight: bold;
     letter-spacing: 0.1em;
+    padding: 0 1.333%;
 }
 
 .work{
-    height: 100vh;
+    height: 700px;
     background: #fff;
-    margin:0 -200%;
-    padding:0 200%;
 }
 
 .work .box{
+    position: absolute;
     width: 260px;
-    height: 410px;
+    height: 350px;
     background: #FCE7D7;
-    margin-left: 115px;
-    padding-right:200%;
+    top: 75px;
+    left: 0;
+    z-index: 2;
 }
 
 .devices{
@@ -229,8 +232,10 @@ article h2, #top_main #mainimg-text{
     display: flex;
     text-align: center;
     flex-direction: column;
+}
+
+.pc picture{
     z-index: 2;
-    height: 220px;
 }
 
 .phone{
@@ -238,12 +243,14 @@ article h2, #top_main #mainimg-text{
     left: 20px;
     width: 50px;
     bottom: 20px;
+    z-index: 2;
 }
 
 .tablet{
     position: absolute;
     right: 20px;
     bottom: 20px;
+    z-index: 2;
 }
 
 article h2{
@@ -257,16 +264,62 @@ article h2{
     z-index: 2;
 }
 
-.more a{
-    position: absolute;
-    right: 20px;
+.more ul{
+    display: flex;
+    width: 150px;
+    height: 20px;
+    z-index: 2;
+    position: relative;
+    margin-left: auto;
+    top: 55px;
 }
 
-#index_profile img{
+.more ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.more img{
+    vertical-align: middle;
+    width: 50px;
+}
+
+.indexProfile{
+    height: 700px;
+}
+
+#index_profile{
+    height: 264px;
+    position: relative;
+}
+
+.indexProfile picture{
+    position: absolute;
+    z-index: 2;
+}
+
+.indexProfile picture img{
     width: 200px;
     height: 200px;
+}
+
+.indexProfile .box{
     position: absolute;
+    width: 240px;
+    height: 630px;
+    background: #FFF;
+    top: 214px;
     right: 0;
+    z-index: 2;
+}
+
+.profile_text{
+    margin-top: 55px;
+    position: relative;
+    z-index: 2;
+}
+.profile_text h2, .profile_text p{
+    margin-top: 10px;
 }
 
 footer{
@@ -280,7 +333,473 @@ footer{
     position: fixed;
     right: 10px;
     bottom: 10px;
+    z-index: 2;
+}
+
+.pagetopModal{
+    width: 15px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+}
+
+/*workページ*/
+#work main{
+    background: #FFF;
+}
+
+#work article{
+    height: auto;
+}
+
+#work section{
+    padding-top: 160px;
+}
+
+#work section:first-child{
+    padding-top: 100px;
+}
+
+#work section:nth-of-type(odd):last-of-type {
+    height: 550px;
+}
+
+#work section .more ul{
+    top: 20px;
+}
+
+#work .boxright{
+    position: absolute;
+    width: 240px;
+    height: 1000px;
+    background: #FCE7D7;
+    top: 75px;
+    left: 135px;
+    z-index: 2;
+}
+
+#work .boxleft{
+    position: absolute;
+    width: 240px;
+    height: 1000px;
+    background: #FCE7D7;
+    top: 75px;
+    right: 135px;
+    z-index: 2;
+}
+
+#work section:last-child .boxright {
+    position: absolute;
+    width: 240px;
+    height: 400px;
+    background: #FCE7D7;
+    top: 75px;
+    right: 115px;
+    z-index: 2;
+}
+
+#work section:last-child .boxleft {
+    position: absolute;
+    width: 240px;
+    height: 400px;
+    background: #FCE7D7;
+    top: 75px;
+    right: 115px;
+    z-index: 2;
+}
+
+/* モーダルエリア共通 */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #D8D8D8;
+}
+
+.modalArea .devices{
+    height: 250px;
+    width: auto;
+}
+
+.modalArea .phone img{
+    left: -55px;
+}
+
+.modalArea .tablet img{
+    right: -55px;
+}
+
+.modalArea h2 img{
+    width: 30%;
+}
+
+#work .modalContents main article section{
+    padding-top: initial;
+}
+
+.modalArea h2, .modalArea article h1, .modalArea article h3{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.modalArea section ol, .modalArea section ul{
+    margin-left: 5%;
+}
+
+.modalArea section ol li{
+    list-style: decimal;
+}
+
+.modalArea section ul li{
+    list-style: initial;
+}
+
+.modalArea .colorBox ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalArea .colorBox .box1, .modalArea .colorBox .box2, .modalArea .colorBox .box3{
+    width: 60px;
+    height: 60px;
+}
+
+.modalArea .colorBox ul li{
+    list-style: none;
+}
+
+.capture{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pccap img{
+    width: 330px;
+}
+
+.tabcap img{
+    width: 170px;
+}
+
+.phonecap img{
+    width: 150px;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+/*  background-color: rgba(30,30,30,0.9);*/
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 90%;
+  max-width: 500px;
+  padding: 10px 10px;
+  background-color: #fff;
+  height: 90%;
+  overflow: auto;
+}
+
+.closeModal {
+  position: fixed;
+  top: -1.5rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 3;
+  font-size: 3rem;
 }
 
 
+/* ボタンスタイル */
+.work button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  color: #707070;
+  font-size: 16px;
+}
 
+/*TracKeys*/
+.modalArea .colorBox .box1{
+    background: #3777FF;
+}
+
+.modalArea .colorBox .box2{
+    background: #DAB300;
+}
+
+.modalArea .colorBox .box3{
+    background: #E0E0E0;
+}
+
+#work footer{
+    background: #fff;
+}
+
+/*Profileページ*/
+/*Backgroundエリア*/
+#profile{
+    height: auto;
+}
+
+#profile main{
+    padding-top: 0;
+}
+
+#profile section{
+    padding-bottom: 50px !important;
+}
+
+#profile .profile_text .box{
+    position: absolute;
+    width: 380px;
+    height: 200px;
+    background: #FFF;
+    top: -10px;
+    z-index: -1;
+    right: 65px;
+}
+
+#profile .profile_text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#profile .profile_text h1, #profile h2{
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#profile button{
+    background: #A5A5A5;
+    color: #FFF;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 60px
+}
+
+#profile #background{
+    background: #fff;
+    position: relative;
+}
+
+#profile #background .box{
+    position: absolute;
+    width: 240px;
+    height: 1185px;
+    background: #FCE7D7;
+    top: 95px;
+    left: 135px;
+    z-index: 2;
+}
+
+.timeline-date, #profile h3{
+    font-weight: bold;
+}
+
+#profile main h1{
+    font-size: 48px;
+    margin: 40px 0;
+}
+
+.timeline {
+  list-style: none;
+}
+.timeline > li {
+  margin-bottom: 60px;
+}
+
+#skills ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills img{
+    width: 40px;
+    margin: 5px 10px;
+}
+
+#profile #strengths, #profile footer{
+    background: #fff;
+}
+
+/*タブレットサイズ */
+@media ( min-width : 600px ){
+    header{
+        width: 200px;
+    }
+    
+    header h1{
+        margin-left: 30px;
+    }
+
+    nav{
+        position:fixed;
+        top: 25px;
+        right: 10px;
+		opacity: 1;
+        width: 400px;
+	}
+    
+    #wrapper nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    nav ul li{
+        width: 100px;
+    }
+    
+    nav ul li a{
+        line-height: 1.5;
+        font-weight: normal;
+    }
+    
+    nav ul li a:hover{
+        color:#F19650;
+    }
+
+	.btnHamburger,#coverlayer{
+	    display: none;
+	}
+    
+    #top_main{
+        height: 50vh;
+    }
+    
+    article h2, #top_main #mainimg-text{
+        font-size: 66px;
+    }
+    
+    #mainimg-text{
+        top: -140px;
+        left: 110px;
+    }
+ 
+     .devices{
+        height: 390px;
+        top: -70px;
+    }
+ 
+    .pc{
+        text-align: start;
+        position: absolute;
+        right: 5%;
+    }
+    
+    .pc img{
+        width: 400px;
+        height: auto;
+    }
+
+    .phone{
+        left: -30px;
+        bottom: -35px;
+    }
+
+    .phone img{
+        width: 100px;
+        height: auto;
+    }
+
+    .tablet{
+        right: -40px;
+        bottom: -35px;
+    }
+
+    .tablet img{
+        width: 200px;
+        height: auto;
+    }
+
+    .work .box{
+        width: 600px;
+        height: 350px;
+        top: 50px;
+    }
+
+    .work_text{
+        margin-top: -350px;
+        width: 220px;
+    }
+
+    .work .more ul{
+        margin-left: 15px;
+    }
+    
+    .indexProfile h2{
+        position: absolute;
+        z-index: 3;
+        right: 1.333%;
+    }
+
+    .indexProfile .box{
+        width: 600px;
+        height: 350px;
+        top: 264px;
+    }
+
+    .indexProfile picture{
+        top: 250px;
+        left: 1.333%;
+    }
+    
+    .indexProfile .profile_text{
+        width: 500px;
+        right: 1.333%;
+        margin-top: auto;
+    }
+
+/*profileページ*/
+    .timeline > li {
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+    }
+    .timeline-date {
+        width: 110px;
+        float: left;
+        margin-top: 20px;
+    }
+    .timeline-content {
+        width: 75%;
+        float: left;
+        border-left: 3px #A7A7A7 solid;
+        padding-left: 30px;
+    }
+    .timeline-content:before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: #F29A56;
+        position: absolute;
+        left: 106px;
+        top: 24px;
+        border-radius: 100%;
+    }
+}
+
+/*PCサイズ */
+@media ( min-width : 960px ){
+        article h2, #top_main #mainimg-text{
+            font-size: 155px;
+    }
+
+}
