@@ -48,7 +48,7 @@ $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み�
 
 </head>
 
-<body>
+<body id="index">
 <div id="wrapper">
   <header>
     <h1><a href="index.html">Yuriko Kikuchi</a></h1>
@@ -80,9 +80,9 @@ $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み�
         </picture>
     </div>
         <p><span id="mainimg-text">Portfolio</span></p>
-        <p>Thank you for visiting my portfolio website.</p>
+        <p id="mainimg_message">Thank you for visiting my portfolio website.</p>
   </div>
-  <main>
+  <main id="index_main">
     <article class="work">
     <h2>Work</h2>
       <section>
@@ -110,7 +110,7 @@ $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み�
         </div>
         </div>
         </div>
-        <div class="work_text">
+        <div class="work_text text">
         <h1>TracKeys（採用サイト）</h1>
         <p>WEBサイト（PC/タブレット/モバイル）</p>
         <p>仮想サイト</p>
@@ -132,7 +132,7 @@ $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み�
             <div id="index_profile">
                 <div class="box"></div>
                 <picture>
-                  <source media="(max-width:599px)" srcset="images/index_profile@600.jpg 2x,images/index_profileo@600.jpg 3x">
+                  <source media="(max-width:599px)" srcset="images/index_profile@600.jpg 2x,images/index_profile@600.jpg 3x">
                   <source media="(min-width:600px)" srcset="images/index_profile@1200.jpg 2x">
                   <img src="images/index_profile@1200.jpg"  alt="プロフィール写真"/>
                 </picture>
