@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html{
+    height: 100%;
+}
+
 body{
     font-size: 16px;
     color: #707070;
@@ -173,7 +177,7 @@ nav.is-active{
     flex-direction: column;
     text-align: center;
     padding-top: 200px;
-    height: 65vh;
+    height: 420px;
 }
 
 #top_main .box {
@@ -214,14 +218,14 @@ article h2, #top_main #mainimg-text{
 }
 
 .work{
-    height: 700px;
+    height: 750px;
     background: #fff;
 }
 
 .work .box{
     position: absolute;
     width: 69.333%;
-    height: 52vh;
+    height: 53vh;
     background: #FCE7D7;
     top: 75px;
     left: 0;
@@ -231,44 +235,14 @@ article h2, #top_main #mainimg-text{
 .devices{
     position: relative;
     height: 250px;
-    margin-bottom: 40px;
-}
-
-.pc{
-    display: flex;
+    margin-bottom: 80px;
     text-align: center;
-    flex-direction: column;
 }
 
-.pc picture{
+.devices img{
+    position: relative;
     z-index: 2;
-}
-
-.pc img{
-    width: 300px;
-}
-
-.phone{
-    position: absolute;
-    left: 20px;
-    width: 50px;
-    bottom: -25px;
-    z-index: 2;
-}
-
-.phone img{
-    width: 70px;
-}
-
-.tablet{
-    position: absolute;
-    right: 20px;
-    bottom: -25px;
-    z-index: 2;
-}
-
-.tablet img{
-    width: 130px;
+    width: 330px;
 }
 
 article h2{
@@ -289,7 +263,7 @@ article h2{
     z-index: 2;
     position: relative;
     margin-left: auto;
-    top: 55px;
+    top: 40px;
 }
 
 .more ul li{
@@ -364,6 +338,10 @@ footer{
 }
 
 /*workページ*/
+#work{
+    height: 100%;
+}
+
 #work main{
     background: #FFF;
 }
@@ -372,16 +350,16 @@ footer{
     height: auto;
 }
 
-#work section{
-    padding-top: 160px;
+#work .list{
+    height: 550px;
 }
 
 #work .list:first-child{
     padding-top: 100px;
 }
 
-#work section:nth-of-type(odd):last-of-type {
-    height: 550px;
+#work section .modalArea {
+    height: 100%;
 }
 
 #work section .more ul{
@@ -391,7 +369,7 @@ footer{
 #work .boxright{
     position: absolute;
     width: 240px;
-    height: 1000px;
+    height: 980px;
     background: #FCE7D7;
     top: 75px;
     right: 0;
@@ -408,36 +386,17 @@ footer{
     z-index: 2;
 }
 
-#work section:last-child .boxright {
-    position: absolute;
-    width: 240px;
-    height: 400px;
-    background: #FCE7D7;
-    top: 75px;
-    right: 0;
-    z-index: 2;
-}
-
-#work section:last-child .boxleft {
-    position: absolute;
-    width: 240px;
-    height: 400px;
-    background: #FCE7D7;
-    top: 75px;
-    left: 0;
-    z-index: 2;
-}
-
 /* モーダルエリア共通 */
 .modalArea {
   display: none;
   position: fixed;
-  z-index: 10; /*サイトによってここの数値は調整 */
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: #D8D8D8;
+  padding: 0;
 }
 
 .modalArea .devices{
@@ -445,20 +404,20 @@ footer{
     width: auto;
 }
 
-.modalArea .phone img{
-    left: -55px;
-}
-
-.modalArea .tablet img{
-    right: -55px;
+.work .modalArea .devices img{
+    left: auto;
 }
 
 .modalArea h2 img{
-    width: 30%;
+    width: 200px;
 }
 
-#work .modalContents main article section{
+#work .modalArea main section{
     padding-top: initial;
+}
+
+.modalArea .logo{
+    text-align: center;
 }
 
 .modalArea h2, .modalArea article h1, .modalArea article h3{
@@ -481,9 +440,13 @@ footer{
     list-style: initial;
 }
 
+.modalArea .sitemap{
+    width: 200px;
+}
+
 .modalArea .colorBox ul{
     display: flex;
-    justify-content: space-between;
+    margin-left: 0;
 }
 
 .modalArea .colorBox .box1, .modalArea .colorBox .box2, .modalArea .colorBox .box3{
@@ -493,6 +456,7 @@ footer{
 
 .modalArea .colorBox ul li{
     list-style: none;
+    margin-right: 20px;
 }
 
 .capture{
@@ -521,14 +485,14 @@ footer{
 
 .modalWrapper {
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 50%;
   transform:translate(-50%,-50%);
   width: 90%;
   max-width: 500px;
   padding: 10px 10px;
   background-color: #fff;
-  height: 90%;
+  height: 94%;
   overflow: auto;
 }
 
@@ -552,16 +516,38 @@ footer{
 }
 
 /*TracKeys*/
-.modalArea .colorBox .box1{
+.modalArea1 .colorBox .box1{
     background: #3777FF;
 }
 
-.modalArea .colorBox .box2{
+.modalArea1 .colorBox .box2{
     background: #DAB300;
 }
 
-.modalArea .colorBox .box3{
+.modalArea1 .colorBox .box3{
     background: #E0E0E0;
+}
+
+/*KIKUYA*/
+.modalArea2 .colorBox .box1{
+    background: #4B5632;
+}
+
+.modalArea2 .colorBox .box2{
+    background: #904348;
+}
+
+/*THE DONUTS*/
+.modalArea3 .colorBox .box1{
+    background: #E1E2DE;
+}
+
+.modalArea3 .colorBox .box2{
+    background: #CA94AF;
+}
+
+.modalArea3 .colorBox .box3{
+    background: #707070;
 }
 
 #work footer{
@@ -619,16 +605,6 @@ footer{
     position: relative;
 }
 
-#profile #background .box{
-    position: absolute;
-    width: 240px;
-    height: 1185px;
-    background: #FCE7D7;
-    top: 95px;
-    right: 0;
-    z-index: 2;
-}
-
 .timeline-date, #profile h3{
     font-weight: bold;
 }
@@ -660,7 +636,7 @@ footer{
 }
 
 /*タブレットサイズ */
-@media ( min-width : 600px ){
+@media ( min-width : 668px ){
     header{
         width: 200px;
     }
@@ -722,45 +698,21 @@ footer{
         height: 350px;
         top: 50px;
     }
- 
-    .pc{
-        text-align: start;
-        position: absolute;
-        right: 7%;
-    }
     
-    .pc img{
+    .work .devices img{
         width: 400px;
-        height: auto;
-    }
-
-    .phone{
-        left: -30px;
-        bottom: -35px;
-    }
-
-    .phone img{
-        width: 100px;
-        height: auto;
-    }
-
-    .tablet{
-        right: -40px;
-        bottom: -35px;
-    }
-
-    .tablet img{
-        width: 200px;
-        height: auto;
+        left: 150px;
+        top: 20px;
     }
 
     .work_text{
-        margin-top: -350px;
-        width: 220px;
+        margin-top: -390px;
+        width: 300px;
     }
-
+    
     .work .more ul{
-        margin-left: 15px;
+        margin-left: 20px;
+        top: 25px;
     }
     
     .indexProfile{
@@ -821,34 +773,18 @@ footer{
 }
 
 /* モーダルエリア共通 */
-    #work .work section .modalArea {
-      height: 84.5%;
-    }
-
     .modalArea .devices{
         width: auto;
         top: 0;
         height: 380px;
-    }
-
-    .modalArea .pc{
-        left: 25%;
-    }
-
-    .modalAreaay .tablet{
-        right: inherit;
     }
     
     .workdetails section {
         height: auto;
     }
     
-    .workdetails img{
-        width: 350px;
-    }
-    
     .colorBox{
-        margin: 5% 20%;
+        margin: 5% 5%;
     }
     
     .pccap img{
@@ -882,12 +818,7 @@ footer{
     }
     
     #profile button{
-        right: 20%;
-    }
-
-    #profile #background .box{
-        height: 84%;
-        width: 82%;
+        right: 30%;
     }
     
     .timeline > li {
@@ -960,35 +891,16 @@ footer{
         }
 
         .work{
-            height:  100vh;
+            height:  1000px;
         }
- 
-        .pc{
-            right: 15%;
+        
+        .work .devices img{
+            top: 0;
+            left: 12%;
         }
-    
-        .pc img{
-            width: 350px;
-        }
-
-        .phone{
-            left: -50px;
-        }
-
-        .phone img{
-            width: 80px;
-        }
-
-        .tablet{
-            right: -70px;
-        }
-
-        .tablet img{
-            width: 150px;
-        }
-
+        
         .work .more ul{
-            margin-left: 6%;
+            margin-left: 15%;
         }
 
         .indexProfile{
@@ -1013,30 +925,32 @@ footer{
     
         .indexProfile .profile_text{
             margin-left: 40%;
-            margin-top: 200px;
+            margin-top: 170px;
         }
         
 /*workページ*/
 
-        .work .list{
+        #work .list{
             width: 45%;
             display: inline-block;
             margin-top: 100px;
+            height: 550px;
         }
         
         .work .box{
             width: 63%;
-            height: 52vh;
+            height: 500px;
             top: 15px;
         }
         
-        .work_text{
-            margin: -90px auto;
+        #work .work_text{
+            margin: -150px 45%;
+            width: 300px;
         }
         
-        .work .more ul{
+        #work section .more ul{
+            top: 155px;
             margin-left: 70%;
-            margin-top: 55px;
         }
         
         #work .boxright,#work section:last-child .boxright{
@@ -1048,6 +962,15 @@ footer{
         #work .boxleft,#work section:last-child .boxleft{
             width: 180%;
             height: 550px;
+        }
+        
+/* モーダルエリア共通 */
+        .modalArea main{
+            margin: auto 300px;
+        }
+        
+        .modalArea main p{
+            margin-left: 50px;
         }
         
         footer{

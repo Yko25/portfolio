@@ -10,6 +10,7 @@
 <link href="css/style.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/modalwindow.js"></script>
 
 <!--TOPに戻るボタン-->
 <script>
@@ -65,19 +66,6 @@ $(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み�
 });
 </script>
 
-<!--モーダルウィンドウのフェードイン-->
-<script>
-$(function () {
-  $('.openModal').click(function(){
-      $('.modalArea').fadeIn();
-      $(this).blur();
-  });
-  $('.closeModal , .modalBg').click(function(){
-    $('.modalArea').fadeOut();
-  });
-});
-</script>
-
 </head>
 
 <body id="work">
@@ -97,7 +85,7 @@ $(function () {
         <li><a href="index.html">Home</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="profile.html">Profile</a></li>
-        <li><a href="mailto:yurikok.jp@gmail.com">Mail</a></li>
+        <li><a href="mailto:contact@yuriko.design">Mail</a></li>
       </ul>
     </nav>
     <div id="coverlayer"></div>
@@ -105,450 +93,380 @@ $(function () {
 <div id="top_main">
     <div class="box">
         <picture>
-          <source media="(max-width:599px)" srcset="images/work_topmain@600.jpg 2x,images/work_topmain@600.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/work_topmain@1200.jpg 2x">
+          <source media="(max-width:667px)" srcset="images/work_topmain@600.jpg 2x,images/work_topmain@600.jpg 3x">
+          <source media="(min-width:668px)" srcset="images/work_topmain@1200.jpg 2x">
           <img src="images/work_topmain@1200.jpg"  alt="トップイメージ写真"/>
         </picture>
     </div>
-        <p><span id="mainimg-text">Work</span></p>
-  </div>
-  <main>
+    <p><span id="mainimg-text">Work</span></p>
+</div>
+<main>
     <article class="work">
-      <section class="list">
-        <div class="devices">
-        <div class="boxright"></div>
-        <div class="pc">
-            <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
-            </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
-        </div>
-        <div class="work_text">
-            <h1>TracKeys（採用サイト）</h1>
-            <p>WEBサイト（PC/タブレット/モバイル）</p>
-            <p>仮想サイト</p>
-            <p>※サイト有り</p>
-        </div>
-        <div class="more">
-            <ul>
-            <button class="openModal">
-            <li>作品詳細</li>
-            <li>
-                <img src="images/arrow.svg" alt="矢印"/>
-            </li>
-            </button>
-            </ul>
-        </div>
-       <section class="modalArea">
-       <div class="closeModal">×</div>
-       <div id="top1"></div>
-       <div class="modalBg"></div>
-            <div id="trackeysModal" class="modalWrapper">
-            <div class="modalContents" id="trackeys">
-        <div class="devices">
-        <div class="pc">
-            <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
-            </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
-        </div>
-        <main>
-        <article class="workdetails">
-        <h2><img src="images/logo_trackeys.svg" alt="TracKeysのロゴ"/></h2>
-            <section>
-                    <h1>アパレル業界特化型の人材紹介会社の採用サイト</h1>
-                    <p>※仮想サイト</p>
-      <h2>媒体</h2>
-      <p>WEBサイト（PC/タブレット/モバイル）</p>
-      <h2>URL</h2>
-      <p><a href="#">trackeys.recruite</a></p>
-      <h2>対応範囲</h2>
-      <p>デザイン / カンプ制作 / レイアウト / 画像補正 / コーディング</p>
-      <h2>制作期間</h2>
-      <p>約40時間</p>
-      <h2>使用ツール</h2>
-      <p>Illustrator / Photoshop / Dreamweaver / HTML / CSS / jQuery</p>
-      <h2>サイトの目的・コンセプト</h2>
-      <p>採用サイト外での採用活動の効果最大化</p>
-      <ul>
-        <li>求職者に応募企業候補に入れてもらう</li>
-        <li>求職者の志望度向上</li>
-        <li>企業・仕事の理解</li>
-      </ul>
-      <h2>ターゲット</h2>
-      <p>アパレル業界からのキャリアチェンジ</p>
-      <p>他人材紹介会社からの転職</p>
-      </section>
-      <section>
-      <h1>制作フロー</h1>
-      <ol>
-        <li>競合サイト調査</li>
-        <li>ペルソナ策定</li>
-        <li>サイトマップ 作成</li>
-        <li>デザインラフ作成</li>
-        <li>コーディング</li>
-      </ol>
-      <h2>1. 競合サイト調査</h2>
-      <p>人材紹介会社の採用サイトを10社程調査。特化型大手総合型人材紹介会社の子会社が多く、独立型企業でも企業サイト内に1ページで求人票を掲載しているのみ。</p>
-      <h2>2. ペルソナ策定</h2>
-      <ul>
-      <li>28歳女性</li>
-      <li>アパレル販売員</li>
-      <li>明るく社交的で献身的。</li>
-      <li>友人いるときはどちらかというと聞き役に徹することが多い。</li>
-      <li>友人は多いが、結婚して家庭を優先する人が増えてきた。</li>
-      <li>仕事は楽しいが、長時間、立ち仕事ということもあり、販売員としてのキャリアに不安を感じている。</li>
-      <li>よく使用するデバイス：iPhone</li>
-      <li>趣味：買い物、旅行、友人との飲み会</li>
-      </ul>
-      <h2>3. サイトマップ作成</h2>
-      <p>採用サイトは動きの多い派手な傾向があるが、忙しい仕事の合間など、移動中に携帯でみることを想定、より多くの情報を伝えることを重視し、シングルページでシンプルな構造に。また、採用選考の参考になり、かつ面接で言語化しやすいよう文章中心のサイト構成に。</p>
-      <img src="images/trackeys_sitemap.svg" alt="TracKeysサイトマップ"/>
-      <h2>4. ラフデザイン作成</h2>
-      <p>あらゆるアパレルブランドの雰囲気に適応するよう、汎用性のあるシンプルなデザインに。</p>
-      <ul>
-      <li>シンプル</li>
-      <li>誠実さ</li>
-      <li>落ち着き</li>
-      </ul>
-      <h2>カラー</h2>
-      <div class="colorBox">
-      <ul>
-      <li><div class="box1"></div><p>#3777FF</p></li>
-      <li><div class="box2"></div><p>#DAB300</p></li>
-      <li><div class="box3"></div><p>#E0E0E0</p></li>
-      </ul>
-      </div>
-      <h3>UI</h3>
-      <p>エントリーボタンの配置</p>
-      <p>右手で携帯を持つことを想定し、親指で押しやすいようエントリーボタンは画面右下に配置。また直接応募するためにサイトに訪問した際、最少動作ですむよう、固定配置</p>
-      <h3>その他</h3>
-      <p>トップメイン画像にターゲットの女性を起用モノクロ画像にすることで洗練された印象に。</p>
-      <h2>5. コーディング</h2>
-      <p>コメントを記載することで、記述内容を理解しやすいようにした。</p>
-      <p>可能な限り画像ではなくCSSで実装し、検索にひっかかりやすいようにした。</p>
-      </section>
-    </article>
-    <div class="capture">
-        <picture class="pccap">
-        <h2>PCサイト</h2>
-          <source media="(max-width:599px)" srcset="images/trackeys_full_pc@990.jpg 2x,images/trackeys_full_pc@1980.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/trackeys_full_pc@1980.jpg 2x">
-          <img src="images/trackeys_full_pc@1980.jpg"  alt="PCサイトスクリーンキャプチャ"/>
-        </picture>
-        <picture class="tabcap">
-        <h2>タブレットサイト</h2>
-          <source media="(max-width:599px)" srcset="images/trackeys_full_tablet@540.jpg 2x,images/trackeys_full_tablet@1080.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/trackeys_full_tablet@1080.jpg 2x">
-          <img src="images/trackeys_full_tablet@1080.jpg"  alt="タブレットサイトスクリーンキャプチャ"/>
-        </picture>
-        <picture class="phonecap">
-        <h2>モバイルサイト</h2>
-          <source media="(max-width:599px)" srcset="images/trackeys_full_phone.jpg 2x,images/trackeys_full_phone.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/trackeys_full_phone.jpg 2x">
-          <img src="images/trackeys_full_phone.jpg"  alt="モバイルサイトスクリーンキャプチャ"/>
-        </picture>
-    </div>
-</main>
+        <section class="list">
+            <div class="devices">
+                <div class="boxright"></div>
+                <picture>
+                  <source media="(max-width:667px)" srcset="images/trackeys_devices@990.png 2x,trackeys_devices@990.png 3x">
+                  <source media="(min-width:668px)" srcset="images/trackeys_devices@1980.png 2x">
+                  <img src="images/trackeys_devices@1980.png"  alt="TracKeysデバイストップ画面"/>
+                </picture>
             </div>
+            <div class="work_text">
+                <h1>TracKeys（採用サイト）</h1>
+                <p>WEBサイト（PC/タブレット/モバイル）</p>
+                <p>仮想サイト※サイト有り</p>
+            </div>
+            <div class="more">
+                <ul>
+                <button class="openModal1">
+                    <li>作品詳細</li>
+                    <li><img src="images/arrow.svg" alt="矢印"/></li>
+                </button>
+                </ul>
+            </div>
+            <section class="modalArea1 modalArea">
+                <div class="closeModal1 closeModal">×</div>
+                <div id="top1"></div>
+                <div class="modalBg"></div>
+                <div id="trackeysModal" class="modalWrapper">
+                <div class="modalContents" id="trackeys">
+                    <div class="devices">
+                        <picture>
+                          <source media="(max-width:667px)" srcset="images/trackeys_devices@990.png 2x,trackeys_devices@990.png 3x">
+                          <source media="(min-width:668px)" srcset="images/trackeys_devices@1980.png 2x">
+                          <img src="images/trackeys_devices@1980.png"  alt="TracKeysデバイストップ画面"/>
+                        </picture>
+                    </div>
+                    <main>
+                        <article class="workdetails">
+                            <h2 class="logo"><img src="images/logo_trackeys.svg" alt="TracKeysのロゴ"/></h2>
+                            <section>
+                                <h1>アパレル業界特化型の人材紹介会社の採用サイト※仮想サイト</h1>
+                                <h2>媒体</h2>
+                                <p>WEBサイト（PC/タブレット/モバイル）</p>
+                                <h2>URL</h2>
+                                <p><a href="#">trackeys.recruite</a></p>
+                                <h2>対応範囲</h2>
+                                <p>デザイン / カンプ制作 / レイアウト / 画像補正 / コーディング</p>
+                                <h2>制作期間</h2>
+                                <p>約40時間</p>
+                                <h2>使用ツール</h2>
+                                <p>Illustrator / Photoshop / Dreamweaver / HTML / CSS / jQuery</p>
+                                <h2>サイトの目的・コンセプト</h2>
+                                <p>採用サイト外での採用活動の効果最大化</p>
+                                <ul>
+                                    <li>求職者に応募企業候補に入れてもらう</li>
+                                    <li>求職者の志望度向上</li>
+                                    <li>企業・仕事の理解</li>
+                                </ul>
+                                <h2>ターゲット</h2>
+                                <p>アパレル業界からのキャリアチェンジ</p>
+                                <p>他人材紹介会社からの転職</p>
+                            </section>
+                            <section>
+                                <h1>制作フロー</h1>
+                                <ol>
+                                    <li>競合サイト調査</li>
+                                    <li>ペルソナ策定</li>
+                                    <li>サイトマップ 作成</li>
+                                    <li>デザインラフ作成</li>
+                                    <li>コーディング</li>
+                                </ol>
+                                <h2>1. 競合サイト調査</h2>
+                                <p>人材紹介会社の採用サイトを10社程調査。特化型大手総合型人材紹介会社の子会社が多く、独立型企業でも企業サイト内に1ページで求人票を掲載しているのみ。</p>
+                                <h2>2. ペルソナ策定</h2>
+                                <ul>
+                                    <li>28歳女性</li>
+                                    <li>アパレル販売員</li>
+                                    <li>明るく社交的で献身的。</li>
+                                    <li>友人いるときはどちらかというと聞き役に徹することが多い。</li>
+                                    <li>友人は多いが、結婚して家庭を優先する人が増えてきた。</li>
+                                    <li>仕事は楽しいが、長時間、立ち仕事ということもあり、販売員としてのキャリアに不安を感じている。</li>
+                                    <li>よく使用するデバイス：iPhone</li>
+                                    <li>趣味：買い物、旅行、友人との飲み会</li>
+                                </ul>
+                                <h2>3. サイトマップ作成</h2>
+                                <p>採用サイトは動きの多い派手な傾向があるが、忙しい仕事の合間など、移動中に携帯でみることを想定、より多くの情報を伝えることを重視し、シングルページでシンプルな構造に。また、採用選考の参考になり、かつ面接で言語化しやすいよう文章中心のサイト構成に。</p>
+                                <div class="sitemap"><img src="images/trackeys_sitemap.svg" alt="TracKeysサイトマップ"/></div>
+                                <h2>4. ラフデザイン作成</h2>
+                                <p>あらゆるアパレルブランドの雰囲気に適応するよう、汎用性のあるシンプルなデザインに。</p>
+                                <ul>
+                                    <li>シンプル</li>
+                                    <li>誠実さ</li>
+                                    <li>落ち着き</li>
+                                </ul>
+                                <h2>カラー</h2>
+                                <div class="colorBox">
+                                    <ul>
+                                        <li><div class="box1"></div><p>#3777FF</p></li>
+                                        <li><div class="box2"></div><p>#DAB300</p></li>
+                                        <li><div class="box3"></div><p>#E0E0E0</p></li>
+                                    </ul>
+                                </div>
+                                <h3>UI</h3>
+                                <p>エントリーボタンの配置</p>
+                                <p>右手で携帯を持つことを想定し、親指で押しやすいようエントリーボタンは画面右下に配置。また直接応募するためにサイトに訪問した際、最少動作ですむよう、固定配置</p>
+                                <h3>その他</h3>
+                                <p>トップメイン画像にターゲットの女性を起用モノクロ画像にすることで洗練された印象に。</p>
+                                <h2>5. コーディング</h2>
+                                <p>コメントを記載することで、記述内容を理解しやすいようにした。</p>
+                                <p>可能な限り画像ではなくCSSで実装し、検索にひっかかりやすいようにした。</p>
+                            </section>
+                        </article>
+                    <div class="capture">
+                        <picture class="pccap">
+                            <h2>PCサイト</h2>
+                              <source media="(max-width:667px)" srcset="images/trackeys_full_pc@990.jpg 2x,images/trackeys_full_pc@1980.jpg 3x">
+                              <source media="(min-width:668px)" srcset="images/trackeys_full_pc@1980.jpg 2x">
+                              <img src="images/trackeys_full_pc@1980.jpg"  alt="PCサイトスクリーンキャプチャ"/>
+                            </picture>
+                        <picture class="tabcap">
+                            <h2>タブレットサイト</h2>
+                              <source media="(max-width:667px)" srcset="images/trackeys_full_tablet@540.jpg 2x,images/trackeys_full_tablet@1080.jpg 3x">
+                              <source media="(min-width:668px)" srcset="images/trackeys_full_tablet@1080.jpg 2x">
+                              <img src="images/trackeys_full_tablet@1080.jpg"  alt="タブレットサイトスクリーンキャプチャ"/>
+                        </picture>
+                        <picture class="phonecap">
+                            <h2>モバイルサイト</h2>
+                              <source media="(max-width:667px)" srcset="images/trackeys_full_phone.jpg 2x,images/trackeys_full_phone.jpg 3x">
+                              <source media="(min-width:668px)" srcset="images/trackeys_full_phone.jpg 2x">
+                              <img src="images/trackeys_full_phone.jpg"  alt="モバイルサイトスクリーンキャプチャ"/>
+                        </picture>
+                    </div>
+                    </main>
+                </div>
  
             </div>
         <p class="pagetopModal"><a href="#"><img src="images/top.svg" alt="トップへ戻る"/></a></p>
         </section>
         </section>
         <section class="list">
-        <div class="devices">
-        <div class="pc">
-            <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
-            </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
-        </div>
-        <div class="work_text">
-        <h1>TracKeys（採用サイト）</h1>
-        <p>WEBサイト（PC/タブレット/モバイル）</p>
-        <p>仮想サイト</p>
-        <p>※サイト有り</p>
-        </div>
-        <div class="more">
-            <ul>
-            <a href="#">
-            <li>作品詳細</li>
-            <li><img src="images/arrow.svg" alt="矢印"/></li>
-            </a>
-            </ul>
-        </div>
-       <section class="modalArea">
-       <div class="closeModal">×</div>
-       <div id="top2"></div>
-       <div class="modalBg"></div>
+            <div class="devices">
+                <picture>
+                  <source media="(max-width:667px)" srcset="images/kikuya_pc@750.png 2x,images/kikuya_pc@750.png 3x">
+                  <source media="(min-width:668px)" srcset="images/kikuya_pc@1500.png 2x">
+                  <img src="images/kikuya_pc@1500.png"  alt="kikuyaPC画面"/>
+                </picture>
+            </div>
+            <div class="work_text">
+                <h1>KIKUYA（温泉施設紹介サイト）</h1>
+                <p>WEBサイト（PC）</p>
+                <p>仮想サイト※デザインのみ</p>
+            </div>
+            <div class="more">
+                <ul>
+                <button class="openModal2">
+                    <li>作品詳細</li>
+                    <li><img src="images/arrow.svg" alt="矢印"/></li>
+                </button>
+                </ul>
+            </div>
+            <section class="modalArea2 modalArea">
+            <div class="closeModal2 closeModal">×</div>
+            <div id="top2"></div>
+            <div class="modalBg"></div>
             <div id="kikuyaModal" class="modalWrapper">
             <div class="modalContents" id="kikuya">
-        <div class="devices">
-        <div class="pc">
-            <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
-            </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
-        </div>
-        <main>
-        <article class="workdetails">
-        <h2><img src="images/logo_trackeys.svg" alt="TracKeysのロゴ"/></h2>
-            <section>
-            <h1>日帰り温泉の紹介サイト</h1>
-            <p>※仮想サイト</p>
-            <h2>媒体</h2>
-      <p>WEBデザインのみ（PC）</p>
-      <h2>URL</h2>
-      <p><a href="#">kikuya.recruite</a></p>
-      <h2>対応範囲</h2>
-      <p>デザインのみ（ロゴ含む）</p>
-      <h2>制作期間</h2>
-      <p>約●●時間</p>
-      <h2>使用ツール</h2>
-      <p>Illustrator / Photoshop / XD</p>
-      <h2>コンセプト</h2>
-      <p>高級感がありながらも、気軽に立ち寄りやすい雰囲気</p>
-      <h2>ターゲット</h2>
-      <p>日帰り観光客</p>
-      </section>
-      <section>
-      <h1>制作フロー</h1>
-      <ol>
-        <li>競合サイト調査</li>
-        <li>ペルソナ策定</li>
-        <li>サイトマップ 作成</li>
-        <li>デザイン作成</li>
-      </ol>
-      <h2>1. 競合サイト調査</h2>
-      <p>温泉施設のWEBサイトを5社程調査。</p>
-      <h2>2. ペルソナ策定</h2>
-      <ul>
-      <li>鎌倉の寺社仏閣の観光に来た観光客</li>
-      <li>湘南エリアでのマリンスポーツ・海水用帰りの方</li>
-      <li>20〜30代の社会人</li>
-      <li>観光、平日の仕事で疲れた体を癒しに来る方</li>
-      <li>お泊まりは難しいが、日帰りで観光を楽しみたい神奈川県近郊からの観光客</li>
-      </ul>
-      <h2>3. サイトマップ作成</h2>
-      <p>鎌倉などの観光のついでに利用することを想定し、営業時間やアクセス、料金表など基本情報を伝えることを重視。シングルページで各情報への導線を最小限に</p>
-      <img src="images/trackeys_sitemap.svg" alt="TracKeysサイトマップ"/>
-      <h2>4. デザイン作成</h2>
-      <p>あらゆるアパレルブランドの雰囲気に適応するよう、汎用性のあるシンプルなデザインに。</p>
-      <ul>
-      <li>シンプル</li>
-      <li>誠実さ</li>
-      <li>落ち着き</li>
-      </ul>
-      <h2>カラー</h2>
-      <div class="colorBox">
-      <ul>
-      <li><div class="box1"></div><p>#3777FF</p></li>
-      <li><div class="box2"></div><p>#DAB300</p></li>
-      <li><div class="box3"></div><p>#E0E0E0</p></li>
-      </ul>
-      </div>
-      <h3>UI</h3>
-      <p>エントリーボタンの配置</p>
-      <p>右手で携帯を持つことを想定し、親指で押しやすいようエントリーボタンは画面右下に配置。また直接応募するためにサイトに訪問した際、最少動作ですむよう、固定配置</p>
-      <h3>その他</h3>
-      <p>トップメイン画像にターゲットの女性を起用モノクロ画像にすることで洗練された印象に。</p>
-      </section>
-    </article>
-    <div class="capture">
-        <picture class="pccap">
-        <h2>PCサイト</h2>
-          <source media="(max-width:599px)" srcset="images/trackeys_full_pc@990.jpg 2x,images/trackeys_full_pc@1980.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/trackeys_full_pc@1980.jpg 2x">
-          <img src="images/trackeys_full_pc@1980.jpg"  alt="PCサイトスクリーンキャプチャ"/>
-        </picture>
-        <picture class="tabcap">
-        <h2>タブレットサイト</h2>
-          <source media="(max-width:599px)" srcset="images/trackeys_full_tablet@540.jpg 2x,images/trackeys_full_tablet@1080.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/trackeys_full_tablet@1080.jpg 2x">
-          <img src="images/trackeys_full_tablet@1080.jpg"  alt="タブレットサイトスクリーンキャプチャ"/>
-        </picture>
-        <picture class="phonecap">
-        <h2>モバイルサイト</h2>
-          <source media="(max-width:599px)" srcset="images/trackeys_full_phone.jpg 2x,images/trackeys_full_phone.jpg 3x">
-          <source media="(min-width:600px)" srcset="images/trackeys_full_phone.jpg 2x">
-          <img src="images/trackeys_full_phone.jpg"  alt="モバイルサイトスクリーンキャプチャ"/>
-        </picture>
-    </div>
-</main>
+            <div class="devices">
+                <picture>
+                  <source media="(max-width:667px)" srcset="images/kikuya_pc@750.png 2x,images/kikuya_pc@750.png 3x">
+                  <source media="(min-width:668px)" srcset="images/kikuya_pc@1500.png 2x">
+                  <img src="images/kikuya_pc@1500.png"  alt="KIKUYAPC画面"/>
+                </picture>
             </div>
- 
             </div>
-        <p class="pagetopModal"><a href="#"><img src="images/top.svg" alt="トップへ戻る"/></a></p>
+            <main>
+                <article class="workdetails">
+                    <h2 class="logo"><img src="images/logo_kikuya.svg" alt="KIKUYAのロゴ"/></h2>
+                    <section>
+                        <h1>日帰り温泉の紹介サイト※仮想サイト</h1>
+                        <h2>媒体</h2>
+                        <p>WEBデザインのみ（PC）</p>
+                        <h2>対応範囲</h2>
+                        <p>デザインのみ（ロゴ含む）</p>
+                        <h2>制作期間</h2>
+                        <p>約4日</p>
+                        <h2>使用ツール</h2>
+                        <p>Illustrator / Photoshop / XD</p>
+                        <h2>コンセプト</h2>
+                        <p>高級感がありながらも、気軽に立ち寄りやすい雰囲気</p>
+                        <h2>ターゲット</h2>
+                        <p>日帰り観光客</p>
+                    </section>
+                    <section>
+                        <h1>制作フロー</h1>
+                        <ol>
+                            <li>競合サイト調査</li>
+                            <li>ペルソナ策定</li>
+                            <li>サイトマップ 作成</li>
+                            <li>デザイン作成</li>
+                        </ol>
+                        <h2>1. 競合サイト調査</h2>
+                        <p>温泉施設のWEBサイトを5社程調査。</p>
+                        <h2>2. ペルソナ策定</h2>
+                        <ul>
+                            <li>鎌倉の寺社仏閣の観光に来た観光客</li>
+                            <li>湘南エリアでのマリンスポーツ・海水用帰りの方</li>
+                            <li>20〜30代の社会人</li>
+                            <li>観光、平日の仕事で疲れた体を癒しに来る方</li>
+                            <li>お泊まりは難しいが、日帰りで観光を楽しみたい神奈川県近郊からの観光客</li>
+                        </ul>
+                        <h2>3. サイトマップ作成</h2>
+                        <p>鎌倉などの観光のついでに利用することを想定し、営業時間やアクセス、料金表など基本情報を伝えることを重視。シングルページで各情報への導線を最小限に</p>
+                        <div class="sitemap"><img src="images/kikuya_sitemap.svg" alt="KIKUYAサイトマップ"/></div>
+                        <h2>4. デザイン作成</h2>
+                        <p>あらゆるアパレルブランドの雰囲気に適応するよう、汎用性のあるシンプルなデザインに。</p>
+                        <ul>
+                            <li>シンプル</li>
+                            <li>誠実さ</li>
+                            <li>落ち着き</li>
+                        </ul>
+                        <h2>カラー</h2>
+                        <div class="colorBox">
+                            <ul>
+                                <li><div class="box1"></div><p>#4B5632</p></li>
+                                <li><div class="box2"></div><p>#904348</p></li>
+                            </ul>
+                        </div>
+                        <h3>UI</h3>
+                        <p>エントリーボタンの配置</p>
+                        <p>右手で携帯を持つことを想定し、親指で押しやすいようエントリーボタンは画面右下に配置。また直接応募するためにサイトに訪問した際、最少動作ですむよう、固定配置</p>
+                        <h3>その他</h3>
+                        <p>トップメイン画像にターゲットの女性を起用モノクロ画像にすることで洗練された印象に。</p>
+                    </section>
+                </article>
+                <div class="capture">
+                <picture class="pccap">
+                <h2>PCサイト</h2>
+                  <source media="(max-width:667px)" srcset="images/kikuya_full_pc@990.jpg 2x,images/kikuya_full_pc@1980.jpg 3x">
+                  <source media="(min-width:668px)" srcset="images/kikuya_full_pc@1980.jpg 2x">
+                  <img src="images/kikuya_full_pc@1980.jpg"  alt="PCサイトスクリーンキャプチャ"/>
+                </picture>
+                </div>
+            </main>
+            </div>
+            <p class="pagetopModal"><a href="#"><img src="images/top.svg" alt="トップへ戻る"/></a></p>
+            </section>
         </section>
-      </section>
+        <section class="list">
+            <div class="devices">
+                <div class="boxleft"></div>
+                <picture>
+                  <source media="(max-width:667px)" srcset="images/thedonuts_pc@750.png 2x,images/thedonuts_pc@750.png 3x">
+                  <source media="(min-width:668px)" srcset="images/thedonuts_pc@1500.png 2x">
+                  <img src="images/thedonuts_pc@1500.png"  alt="THE DONUTSPC画面"/>
+                </picture>
+            </div>
+            <div class="work_text">
+                <h1>THE DONUTS（ドーナツショップ）</h1>
+                <p>WEBサイト（PC）</p>
+                <p>仮想サイト※デザインのみ</p>
+            </div>
+            <div class="more">
+                <ul>
+                <button class="openModal3">
+                    <li>作品詳細</li>
+                    <li><img src="images/arrow.svg" alt="矢印"/></li>
+                </button>
+                </ul>
+            </div>
+            <section class="modalArea3 modalArea">
+            <div class="closeModal3 closeModal">×</div>
+            <div id="top3"></div>
+            <div class="modalBg"></div>
+            <div id="mrpModal" class="modalWrapper">
+            <div class="modalContents" id="mrp">
+            <div class="devices">
+                <picture>
+                  <source media="(max-width:667px)" srcset="images/thedonuts_pc@750.png 2x,images/thedonuts_pc@750.png 3x">
+                  <source media="(min-width:668px)" srcset="images/thedonuts_pc@1500.png 2x">
+                  <img src="images/thedonuts_pc@1500.png"  alt="THE DONUTSPC画面"/>
+                </picture>
+            </div>
+            </div>
+            <main>
+                <article class="workdetails">
+                    <h2 class="logo"><img src="images/thedonuts_logo.svg" alt="THE DONUTSのロゴ"/></h2>
+                    <section>
+                        <h1>THE DONUTS（ザ・ドーナッツ）</h1>
+                        <p>ドーナツショップ※仮想サイト</p>
+                        <h2>媒体</h2>
+                        <p>WEBデザインのみ（PC）</p>
+                        <h2>対応範囲</h2>
+                        <p>デザインのみ（ロゴ含まない）</p>
+                        <h2>制作期間</h2>
+                        <p>1日</p>
+                        <h2>使用ツール</h2>
+                        <p>Illustrator / Photoshop / XD</p>
+                        <h2>コンセプト</h2>
+                        <p>アメリカ西海岸風で</p>
+                        <h2>ターゲット</h2>
+                        <p>家族連れ、20代の観光客</p>
+                    </section>
+                    <section>
+                        <h1>制作フロー</h1>
+                        <ol>
+                            <li>競合サイト調査</li>
+                            <li>ペルソナ策定</li>
+                            <li>サイトマップ 作成</li>
+                            <li>デザイン作成</li>
+                        </ol>
+                        <h2>1. 競合サイト調査</h2>
+                        <p>テイクアウト中心のスイーツ店のWEBサイトを5社程調査。</p>
+                        <h2>2. ペルソナ策定</h2>
+                        <ul>
+                            <li>30代のパパママ世代</li>
+                            <li>家族でお出かけする時は車</li>
+                            <li>実家や友人宅の訪問時、車でよくこの海岸線を通る</li>
+                            <li>子供は2人</li>
+                        </ul>
+                        <h2>3. サイトマップ作成</h2>
+                        <p>テイクアウトのお店なので、来店前に買いたいものを考えられるよう、メニューを表示。</p>
+                        <div class="sitemap"><img src="images/thedonuts_sitemap.svg" alt="THE DONUTSサイトマップ"/></div>
+                        <h2>4. デザイン作成</h2>
+                        <p>観光名所の下灘駅近くにある、西海岸の雰囲気のドーナツショップ</p>
+                        <ul>
+                            <li>爽やか、ポップ</li>
+                            <li>アメリカ西海岸</li>
+                            <li>都会的な雰囲気</li>
+                        </ul>
+                        <h2>カラー</h2>
+                        <div class="colorBox">
+                            <ul>
+                                <li><div class="box1"></div><p>#E1E2DE</p></li>
+                                <li><div class="box2"></div><p>#CA94AF</p></li>
+                                <li><div class="box3"></div><p>#707070</p></li>
+                            </ul>
+                        </div>
+                        <div>女性、小さい女の子も「かわいい」と感じられるよう差し色にピンクを追加</div>
+                        <img src="images/thedonuts_point.jpg" width="250" height="205.5" alt="背景色の違いの写真"/>
+                        <h3>デザインのポイント</h3>
+                        <p>背景の切替</p>
+                        <p>グラデーション効果によって背景色、写真を自然に切替</p>
+                        <p>ドーナツの写真</p>
+                        <p>テイクアウトのお店のため、事前に購入候補のメニューを決められるよう、ドーナツのラインナップを大きく明確に表示</p>
+                    </section>
+                </article>
+                <div class="capture">
+                <picture class="pccap">
+                <h2>PCサイト</h2>
+                  <source media="(max-width:667px)" srcset="images/thedonuts_full_pc@990.jpg 2x,images/thedonuts_full_pc@1980.jpg 3x">
+                  <source media="(min-width:668px)" srcset="images/thedonuts_full_pc@1980.jpg 2x">
+                  <img src="images/thedonuts_full_pc@1980.jpg"  alt="PCサイトスクリーンキャプチャ"/>
+                </picture>
+                </div>
+            </main>
+            </div>
+            <p class="pagetopModal"><a href="#"><img src="images/top.svg" alt="トップへ戻る"/></a></p>
+            </section>
+        </section>
       <section class="list">
-        <div class="devices">
-        <div class="boxleft"></div>
-        <div class="pc">
+      <div class="devices">
             <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
+              <source media="(max-width:667px)" srcset="images/trackeys_devices@990.png 2x,trackeys_devices@990.png 3x">
+              <source media="(min-width:668px)" srcset="images/trackeys_devices@1980.png 2x">
+              <img src="images/trackeys_devices@1980.png"  alt="TracKeysデバイストップ画面"/>
             </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
-        </div>
-        <div class="work_text">
-        <h1>TracKeys（採用サイト）</h1>
-        <p>WEBサイト（PC/タブレット/モバイル）</p>
-        <p>仮想サイト</p>
-        <p>※サイト有り</p>
-        </div>
-        <div class="more">
-            <ul>
-            <a href="#">
-            <li>作品詳細</li>
-            <li><img src="images/arrow.svg" alt="矢印"/></li>
-            </a>
-            </ul>
-        </div>
-      </section>
-      <section class="list">
-        <div class="devices">
-        <div class="pc">
-            <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
-            </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
-        </div>
-        <div class="work_text">
-        <h1>TracKeys（採用サイト）</h1>
-        <p>WEBサイト（PC/タブレット/モバイル）</p>
-        <p>仮想サイト</p>
-        <p>※サイト有り</p>
-        </div>
-        <div class="more">
-            <ul>
-            <a href="#">
-            <li>作品詳細</li>
-            <li><img src="images/arrow.svg" alt="矢印"/></li>
-            </a>
-            </ul>
-        </div>
-      </section>
-      <section class="list">
-        <div class="devices">
-        <div class="boxright"></div>
-        <div class="pc">
-            <picture>
-              <source media="(max-width:599px)" srcset="images/trackeys_pc@750.png 2x,images/trackeys_pc@750.png 3x">
-              <source media="(min-width:600px)" srcset="images/trackeys_pc@1500.png 2x">
-              <img src="images/trackeys_pc@1500.png"  alt="TracKeysPC画面"/>
-            </picture>
-        <div class="phone">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_phone@180.png 2x,images/trackeys_phone@180.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_phone@360.png 2x">
-                <img src="images/trackeys_phone@360.png"  alt="TracKeys携帯画面"/>
-            </picture>
-        </div>
-        <div class="tablet">
-            <picture>
-                <source media="(max-width:599px)" srcset="images/trackeys_tablet@300.png 2x,images/trackeys_tablet@300.png 3x">
-                <source media="(min-width:600px)" srcset="images/trackeys_tablet@600.png 2x">
-                <img src="images/trackeys_tablet@600.png"  alt="TracKeysタブレット画面"/>
-            </picture>
-        </div>
-        </div>
         </div>
         <div class="work_text">
         <h1>TracKeys（採用サイト）</h1>
