@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="keywords" content="TracKeys, トラッキーズ, 採用, エントリー, アパレル, 転職, 人材紹介">
+<meta name="description" content="株式会社TracKeysの採用サイトです。会社の特徴、ビジョン、求める人材像、募集職種、募集要項などをご覧いただけます。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TracKeys | 採用サイト</title><ul></ul>
+
+<link href="trackeys/css/reset.css" rel="stylesheet">
+<link href="trackeys/css/style.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--TOPに戻るボタン-->
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+
+<!-- エントリーボタン -->
+<script>
+    $(window).on('scroll', function() {                                           //While the user is scrolling
+        console.log("Scrolltop function");                                         
+        entryButtonFlag = document.getElementById('entryButton');                 //Select the entry button element
+        
+        if ((window.scrollY + window.innerHeight) >= $('#entry').offset().top) {  //Check if the user scrolled to/past the big button
+            entryButtonFlag.style.display = "none";                               //If they scrolled past, hide the button
+        }
+        else {
+            entryButtonFlag.style.display = "block";                              //If they scrolled behind it, show it  
+        }    
+    });
+
+</script>
+<!--nav背景-->
+<script>
+$(document).ready(function() {
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 660) {
+            $('header').addClass('backc');
+       } else {
+            $('header').removeClass('backc');
+            }
+       });
+});
+</script>
+
+<script>
+/**
+ * 到達したら要素を表示させる
+ */
+function showElementAnimation() {
+
+  var element = document.getElementsByClassName('js-animation');
+  if(!element) return; // 要素がなかったら処理をキャンセル
+  
+  var showTiming = window.innerHeight > 768 ? 200 : 40; // 要素が出てくるタイミングはここで調整
+  var scrollY = window.pageYOffset;
+  var windowH = window.innerHeight;
+
+  for(var i=0;i<element.length;i++) { var elemClientRect = element[i].getBoundingClientRect(); var elemY = scrollY + elemClientRect.top; if(scrollY + windowH - showTiming > elemY) {
+      element[i].classList.add('is-show');
+    } else if(scrollY + windowH < elemY) {
+      // 上にスクロールして再度非表示にする場合はこちらを記述
+      element[i].classList.remove('is-show');
+    }
+  }
+}
+showElementAnimation();
+window.addEventListener('scroll', showElementAnimation);
+</script>
+
+<script>
+$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('.btnHamburger').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+    $('.btnHamburger,#coverlayer,nav').toggleClass('is-active');　//.is-activeを付ける・外す
+  });
+});
+</script>
+
+<script>
+$(function(){　//ページの内容（HTMLやCSSなど）を全て読み込み準備が整ったら実行
+  $('nav ul li a').on('click', function(){　//.btnHamburgerがクリックされた時の処理
+    $('.btnHamburger,#coverlayer,nav').removeClass('is-active');　//.is-activeを付ける・外す
+  });
+});
+</script>
+
+<script>
+$(function(){
+$("#acMenu dt").on("click", function() {
+$(this).next().slideToggle();
+});
+});
+</script>
+
+
+
+</head>
+
+<body class="index">
+<div id="wrapper">
+<header id="top">
+    <h1><a href="index.html"><img src="images/logo.svg" alt="TracKeys（トラッキーズ）ロゴ"/></a></h1>
+    <div class="btnHamburger">
+        <span class="line line_01"></span>
+        <span class="line line_02"></span>
+        <span class="line line_03"></span>
+    </div>
+    <nav>
+        <ul>
+        <li><a href="#philosophy">企業理念</a></li>
+        <li><a href="#merit">働くメリット</a></li>
+        <li><a href="#content">社員メッセージ</a></li>
+        <li><a href="#positions">募集ポジション</a></li>
+        </ul>
+    </nav>
+    <div id="coverlayer"></div>
+</header>
+<div id="top_main">
+        <picture>
+            <source media="(max-width:599px)" srcset="images/mainimg1@828.jpg 2x,images/mainimg1@1536.jpg 3x">
+            <source media="(min-width:600px)" srcset="images/mainimg1@1536_2.jpg 2x">
+            <img src="images/mainimg1@1536_2.jpg"  alt="トップイメージ写真"/>
+        </picture>
+        <p><span id="mainimg-text" class="outline">輝くことが<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;力になる</span></p>
+    </div>
+
+    <div class="inner">
+    <main>
+    <article id="philosophy">
+    <h2 class="js-animation">&#032;企業理念</h2>
+        <section>
+        <h1 class="js-animation">課題解決から価値創造へ</h1>
+        <p class="js-animation">求職者・企業担当者など、各クライアントの声に真摯に耳を傾け、課題解決することで、企業と人の縁を結んでいます。人の成長が組織を成長させ、アパレル業界の活性化・成長に貢献することを目指しています。</p>
+        </section>
+    </article>
+    <article id="merit">
+    <h2 class="js-animation">働くメリット</h2>
+        <section>
+        <h1 class="js-animation"><font size="6"><span style="color:#DAB300">1</span></font>&ensp;業界スペシャリスト集団</h1>
+        <p class="js-animation">社員はアパレル企業でのエリアマネージャー経験者や人材紹介会社出身者など、スペシャリストの集まりです。学びの機会が豊富で、高めあえる環境です。</p>
+        </section>
+        <section>
+        <h1 class="js-animation"><font size="6"><span style="color:#DAB300">2</span></font>&ensp;クライアントファースト</h1>
+        <p class="js-animation">クライアントの課題解決を目的としたKPI設定を行います。数字を追うことばかりに気を取られるのではなく、あくまでも”クライアントの為”という共通認識が各社員に根付いています。</p>
+        </section>
+        <section>
+        <h1 class="js-animation"><font size="6"><span style="color:#DAB300">3</span></font>&ensp;豊富なアウトプットの機会</h1>
+        <p class="js-animation">チーム制を導入しており、隔週・月・四半期等、定期的にチームリーダーとのミーティングの機会を設けています。行動計画や目標設定、キャリアプランなど、個人に合わせたキャリア構築を応援しています。</p>
+        </section>
+    </article>
+<div id="content">
+<article class="messages">
+<h2 class="js-animation">社員からのメッセージ</h2>
+    <div class="messagebox">
+        <div class="imgB js-animation">
+            <div class="imgMembers">
+                <img src="images/interview1.jpg" width="165" height="165" alt="伊藤華写真"/>
+            </div>
+        </div>
+        <p class="js-animation">キャリアアドバイザー<br>伊藤 華&#040;2013年中途入社&#041;</p>
+        </div>
+    <section>
+    <h1 class="js-animation">入社の決め手</h1>
+    <p class="js-animation">選考の際、一番自分自身を知ろうとしてくださり、評価を頂けたこと。</p>
+    <h2 class="js-animation">社員の印象</h2>
+    <p class="js-animation">明るく、お互いを尊重する方が多い印象です。職業柄、相手の話に耳を傾けることが定着しており、心地よく働くことができています。</p>
+    <h2 class="js-animation">どんな仲間と仕事をしたい</h2>
+    <p class="js-animation">献身的な方と働きたいです。日々、求職者や企業の為に働いています。双方向からの意見を尊重しつつ、主張が必要な場面が度々発生します。その際、人の為、企業の為という献身的な考え方が根付いている方だとよいなと思います。</p>
+    <h2 class="js-animation">仕事をする上で大切にしていること</h2>
+    <p class="js-animation">パターン化しないことです。日々たくさんの方とお話しする中で、どうしてもアドバイスがパターン化してしまいそうになることもあります。その際は、それぞれの考え方、決断理由、思いに寄り添うことを心がけています。</p>
+  </section>
+</article>
+<article class="messages">
+    <div class="messagebox">
+        <div class="imgB js-animation">
+            <div class="imgMembers">
+                <img src="images/interview2.jpg" width="165" height="165" alt="佐藤隼人写真"/>
+                </div>
+        </div>
+        <p class="js-animation">リクルーティングアドバイザー<br>佐藤 隼人&#040;2016年新卒入社&#041;</p>
+		</div>
+    <section>
+    <h1 class="js-animation">入社の決め手</h1>
+    <p class="js-animation">経営者、マネージャーなど、経営の中枢で活躍される方と関わることができ、成長できると感じたからです。</p>
+    <h2 class="js-animation">社員の印象</h2>
+    <p class="js-animation">明るくハツラツとした方が多い印象です。</p>
+    <h2 class="js-animation">どんな仲間と仕事をしたい</h2>
+    <p class="js-animation">お互いを高め合える方と働きたいです。私は、「昨日より成長する」ことを目標に、日々の業務に取り組んでいます。自分自身も周囲に刺激を与えられる人間に成長したいと思っています。</p>
+    <h2 class="js-animation">仕事をする上で大切にしていること</h2>
+    <p class="js-animation">常に改善する意識を忘れないことです。仕事に完璧はないと考えています。そのため、常に目の前の仕事を少しでも改善できないか、という視点を持って業務を行うことが大切だと思います。日々、クライアントに提案できることはないか模索したり、より売上や利益を上げるためのスキルを身に付けたりしています。</p>
+  </section>
+</article>
+<article class="messages js-animation">
+		<div class="messagebox">
+        <div class="imgB">
+            <div class="imgMembers">
+                <img src="images/interview3.jpg" width="165" height="165" alt="田中俊介写真"/>
+            </div>
+        </div>
+        <p class="js-animation">カスタマーサービススタッフ<br>田中 俊介&#040;2018年新卒入社&#041;</p>
+		</div>
+    <section>
+    <h1 class="js-animation">入社の決め手</h1>
+    <p class="js-animation">以前、弊社サービスを利用した際、大変心地よかった為です。</p>
+    <h2 class="js-animation">社員の印象</h2>
+    <p class="js-animation">思いやりに溢れる方が多いイメージです。</p>
+    <h2 class="js-animation">どんな仲間と仕事をしたい</h2>
+    <p class="js-animation">お互いを高め合える方と働きたいです。私は、「昨日より成長する」ことを目標に、日々の業務に取り組んでいます。自分自身も周囲に刺激を与えられる人間に成長したいと思っています。</p>
+    <h2 class="js-animation">仕事をする上で大切にしていること</h2>
+    <p class="js-animation">常に改善する意識を忘れないことです。仕事に完璧はないと考えています。そのため、常に目の前の仕事を少しでも改善できないか、という視点を持って業務を行うことが大切だと思います。日々、クライアントに提案できることはないか模索したり、より売上や利益を上げるためのスキルを身に付けたりしています。</p>
+  </section>
+</article>
+</div>
+    <article id="positions">
+    <h2 class="js-animation">募集ポジション</h2>
+        <dl id="acMenu" class="js-animation">
+        <dt>&rarr;&ensp;キャリアアドバイザー</dt>
+        <dd><p><strong>職種概要</strong>&nbsp;転職希望者に対するキャリアカウンセリング、求職者と求人企業とのキャリアマッチング業務、面接調整などを行って頂きます。</p>
+        <p><strong>雇用形態</strong>&nbsp;正社員（期間の定めなし）</p>
+        <p><strong>試用期間</strong>&nbsp;有&#047;3ヶ月</p>
+        <p><strong>&nbsp;給&nbsp;&nbsp;&nbsp;&nbsp;与&nbsp;</strong>&nbsp;年収&#058;380 万円～450 万円&#040;月額&#058;27 万円～33 万円&#041;</p>
+				&#12304;月給&#12305;27万円～33万円<br>
+        <p>月給内訳＝基準内給与＋固定残業代<br>※基準内給与&#058;19.5万円～24万円<br>※固定残業代&#058;時間外労働の有無に限らず、45時間分の時間外手当として7.5～9万円を支給。45時間を超える時間外労働分は追加で支給。<br>※ご経験&#149;能力に応じて当社規定に従い、決定致します。</p>
+        <p>&#12304;モデル年収&#12305;<br>&ndash;ジュニア 年収380万円～500万円<br>&ndash;リーダー 年収500万円～600万円<br>&ndash;マネージャー 年収600～1000万円
+※年功ではなく個人の成果での評価をしています。実績次第では早期の昇格が可能です。</p>
+        <p><strong>勤務時間</strong>&nbsp;&nbsp;09&#058;00 ～ 18&#058;00<br>
+        ※試用期間中&#040;基本3ヵ月&#041;は上記の始業・終業時間を適用しますが、試用期間終了後はフレックスタイム制を適用します。<br>フレックスタイム制&#058;コアタイム11～17時/フレキシブルタイム8～11時および17時～20時<br>※想定残業時間 月30時間～45時間程度。<br>社内CA残業平均は月35時間程度です。</p>
+        <p>休日&#149;休暇 完全週休2日制&#040;月～土までのうちシフトで定める1日、日曜&#041;祝日<br>※土曜日にカウンセリング等で出社する事が月に1～2回程度ありますが、一週間以内に代休で振替えます。<br>有給休暇, 夏季休暇, 慶弔休暇, 年末年始産前産後休暇、育児休暇（実績有）<br>有給休暇10日年間休日128日</p></dd>
+        <dt>&rarr;&ensp;リクルーティングアドバイザー</dt>
+        <dd><p><strong>職種概要</strong>&nbsp;主に企業に対する新規法人開拓、採用ソリューションの提供、求人票の作成、ターゲットの選定、候補者の推薦～選考コーディネートなどを行って頂きます。</p>
+        <p><strong>雇用形態</strong>&nbsp;正社員（期間の定めなし）</p>
+        <p><strong>試用期間</strong>&nbsp;有&#047;3ヶ月</p>
+        <p><strong>&nbsp;給&nbsp;&nbsp;&nbsp;&nbsp;与&nbsp;</strong>&nbsp;年収&#058;500万円～600万円&#040;月額&#058;33万円～39万円&#041;</p>
+				&#12304;月給&#12305;36万円～39万円<br>
+        <p>月給内訳＝基準内給与＋固定残業代<br>※基準内給与&#058;26万円～28万円<br>※固定残業代&#058;時間外労働の有無に限らず、45時間分の時間外手当として10～11万円を支給。45時間を超える時間外労働分は追加で支給。<br>※ご経験&#149;能力に応じて当社規定に従い、決定致します。<br>※年功ではなく個人の成果での評価をしています。実績次第では早期の昇格が可能です。</p>
+				<p><strong>&nbsp;賞&nbsp;&nbsp;&nbsp;&nbsp;与&nbsp;</strong>&nbsp;
+年2回7月,12月&#047;※パフォーマンスボーナス</p>
+        <p><strong>勤務時間</strong>&nbsp;&nbsp;09&#058;00 ～ 18&#058;00<br>
+        ※試用期間中&#040;基本3ヵ月&#041;は上記の始業・終業時間を適用しますが、試用期間終了後はフレックスタイム制を適用します。<br>フレックスタイム制&#058;コアタイム11～17時/フレキシブルタイム8～11時および17時～20時<br>※想定残業時間 月30時間～45時間程度。<br>社内CA残業平均は月35時間程度です。</p>
+        <p>休日&#149;休暇 完全週休2日制&#040;日曜&#041;祝日<br>有給休暇, 夏季休暇, 慶弔休暇, 年末年始産前産後休暇、育児休暇（実績有）<br>有給休暇10日年間休日128日</p></dd>
+        <dt>&rarr;&ensp;カスタマーサービススタッフ</dt>
+        <dd><p><strong>職種概要</strong>&nbsp;転職希望者に対するスカウト活動やデータベースに登録されている人材からのエントリー受付。</p>
+        <p><strong>雇用形態</strong>&nbsp;正社員（期間の定めなし）</p>
+        <p><strong>試用期間</strong>&nbsp;有&#047;3ヶ月</p>
+        <p><strong>&nbsp;給&nbsp;&nbsp;&nbsp;&nbsp;与&nbsp;</strong>&nbsp;年収&#058;380 万円～450 万円&#040;月額&#058;27 万円～33 万円&#041;</p>
+				&#12304;月給&#12305;27万円～33万円<br>
+        <p>月給内訳＝基準内給与＋固定残業代<br>※基準内給与&#058;19.5万円～24万円<br>※固定残業代&#058;時間外労働の有無に限らず、45時間分の時間外手当として7.5～9万円を支給。45時間を超える時間外労働分は追加で支給。<br>※ご経験&#149;能力に応じて当社規定に従い、決定致します。</p>
+        <p><strong>勤務時間</strong>&nbsp;&nbsp;09&#058;00 ～ 18&#058;00<br>
+        ※試用期間中&#040;基本3ヵ月&#041;は上記の始業・終業時間を適用しますが、試用期間終了後はフレックスタイム制を適用します。<br>フレックスタイム制&#058;コアタイム11～17時/フレキシブルタイム8～11時および17時～20時<br>※想定残業時間 月30時間～45時間程度。<br>社内CA残業平均は月35時間程度です。</p>
+        <p>休日&#149;休暇 完全週休2日制&#040;日曜&#041;祝日<br>有給休暇, 夏季休暇, 慶弔休暇, 年末年始産前産後休暇、育児休暇（実績有）<br>有給休暇10日年間休日128日</p></dd>
+        <dt>&rarr;&ensp;マーケティングスタッフ</dt>
+        <dd><p><strong>職種概要</strong>&nbsp;採用希望企業、転職希望者の集客、マーケティング業務。</p>
+        <p><strong>雇用形態</strong>&nbsp;正社員（期間の定めなし）</p>
+        <p><strong>試用期間</strong>&nbsp;有&#047;3ヶ月</p>
+        <p><strong>&nbsp;給&nbsp;&nbsp;&nbsp;&nbsp;与&nbsp;</strong>&nbsp;年収&#058;380 万円～450 万円&#040;月額&#058;27 万円～33 万円&#041;</p>
+				&#12304;月給&#12305;27万円～33万円<br>
+        <p>月給内訳＝基準内給与＋固定残業代<br>※基準内給与&#058;19.5万円～24万円<br>※固定残業代&#058;時間外労働の有無に限らず、45時間分の時間外手当として7.5～9万円を支給。45時間を超える時間外労働分は追加で支給。<br>※ご経験&#149;能力に応じて当社規定に従い、決定致します。</p>
+        <p><strong>勤務時間</strong>&nbsp;&nbsp;09&#058;00 ～ 18&#058;00<br>
+        ※試用期間中&#040;基本3ヵ月&#041;は上記の始業・終業時間を適用しますが、試用期間終了後はフレックスタイム制を適用します。<br>フレックスタイム制&#058;コアタイム11～17時/フレキシブルタイム8～11時および17時～20時<br>※想定残業時間 月30時間～45時間程度。<br>社内CA残業平均は月35時間程度です。</p>
+        <p>休日&#149;休暇 完全週休2日制&#040;日曜&#041;祝日<br>有給休暇, 夏季休暇, 慶弔休暇, 年末年始産前産後休暇、育児休暇（実績有）<br>有給休暇10日年間休日128日</p></dd>
+        </dl>
+    </article>
+<div id="entryBox">
+<div id="entry" class="js-animation"><a href="entry.html">エントリー</a></div>
+<p class="js-animation">TracKeysへのご応募をお考えの方は、<br>こちらの応募フォームよりご応募ください。<br>5日営業日以内に採用担当者よりご連絡致します。</p>
+</div>
+  </main>
+  </div>
+<footer>
+    <div id="localnav">
+        <ul>
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">TracKeysサイト</a></li>
+        </ul>
+    </div>
+    <div id="cr"><small>© TracKeys inc. All rights reserved.</small></div>
+  </footer>
+<p id="entryButton" class="btnEntry"><a href="entry.html">エントリー</a></p>
+	<p class="pagetop"><a href="#top">TOP</a></p>
+</div>
+</body>
+</html>

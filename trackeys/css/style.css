@@ -1,0 +1,596 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+    font-size: 14px;
+    color: #000000;
+    line-height: 2;
+    font-family:"Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+    background: #fff;
+    -webkit-text-size-adjust:100%;
+}
+
+img{
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+}
+
+#wrapper,wrapper2{
+	width: 100%;
+	margin: 0 auto;
+}
+
+a{
+	color: #000000;
+	text-decoration: none;
+}
+
+.pagetop{
+	display: none;
+}
+
+.pagetop a{
+	display: block;
+	position: fixed;
+    bottom: 0;
+	right: 10px;
+	font-size: 12px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background: #e0e0e0;
+    text-align: center;
+}
+
+header{
+    position: fixed;
+    width:100%;
+    height: 40px;
+    top: 0;
+    z-index: 3;
+}
+
+.backc{
+    background: rgba(255,255,255,0.8);
+}
+
+header h1{
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 125px;
+    height: 30px;
+}
+
+
+/*ハンバーガーメニュークリック前*/
+/* クリックエリアと位置を指定 ---------------------- */
+.btnHamburger {
+  	position: fixed;
+    top: 10px;
+  	right: 10px;
+  	width: 30px; /* クリックエリアの横幅*/
+  	height: 20px; /* クリックエリアの高さ*/
+  	cursor: pointer;
+    z-index: 2;
+}
+
+/* 3本線の1本ごとに共通するスタイルを指定 ---------------------- */
+.btnHamburger .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  	width: 30px; /* 横幅 */
+  	height: 3px; /* 1本辺りの高さ */
+  	background: #3777FF; /* 線の色 */
+
+  	/* 適用するプロパティ、変化する時間、変化する速度 */
+  	-webkit-transition: all 0.3s ease-out;
+  	transition: all 0.3s ease-out;
+ }
+
+/* 3本線の各線の位置を指定 ---------------------- */
+.btnHamburger .line_01 { top: 0; }
+.btnHamburger .line_02 { top: 8px; }
+.btnHamburger .line_03 { top: 16px; }
+
+/*ハンバーガーメニュークリック後*/
+/* 最上部の線のスタイル ---------------------- */
+.btnHamburger.is-active .line_01 {
+  top: 8px; /* 上から2番目の線の位置に変更 */
+
+  /* 線を45度回転 */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* 上から2番目の線のスタイル ---------------------- */
+.btnHamburger.is-active .line_02 {
+  opacity: 0; /* 不透明度を下げて線を消す */
+}
+
+/* 最下部の線のスタイル ---------------------- */
+.btnHamburger.is-active .line_03 {
+  top: 8px; /* 上から2番目の線の位置に変更 */
+
+  /* 線を135度回転 */
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+/*線の色をオレンジに変更*/
+.btnHamburger.is-active .line{
+	background: #3777FF;;
+}
+
+/*#coverlayerのクリック前*/
+#coverlayer{
+	width: 0;
+	background: #000;
+	position: fixed;
+	top:0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	transition: 0.5s;
+	z-index: 1;
+}
+
+/*#coverlayerのクリック後*/
+#coverlayer.is-active{
+	width: 100%;
+	opacity: 0.8;
+}
+
+/*navクリック前*/
+nav{
+	position: fixed;
+	width: 180px;
+	right: 360px;
+	top: 60px;
+	opacity: 0;
+	z-index: 2;
+}
+
+nav ul li a{
+	display: block;
+	line-height: 48px;
+	text-align: center;
+	box-sizing: border-box;
+	color: #3777FF;
+}
+
+/*navクリック後*/
+nav.is-active{
+	opacity: 1;
+	/*position:absoluteが効いている状態でセンタリングする方法*/
+	left:50%;
+	transform:translateX(-50%);
+	transition: 0.5s;
+}
+
+article::before{
+    content: "";
+    display: block;
+    height: 50px;
+}
+
+.js-animation {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+.js-animation.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+#top_main{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#top_main p{
+    position: fixed;
+    z-index: 2;
+    right: 30px;
+    bottom: 105px;
+    line-height: 1.5;
+}
+
+#mainimg-text{
+    font-family: "ヒラギノ明朝 ProN", "serif";
+}
+
+.outline{
+    display        : inline-block;
+    color          : #ffffff;            /* 文字の色 */
+    font-size      : 40px;               /* 文字のサイズ */
+    text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+              -1px 1px 0 #000, 1px -1px 0 #000,
+              0px 1px 0 #000,  0-1px 0 #000,
+              -1px 0 0 #000, 1px 0 0 #000;
+}
+
+main{
+   overflow: hidden;
+}
+
+.inner{
+    margin-top: 677px;
+    padding-right:10px;
+    padding-left: 10px;
+    background: #fff;
+    width: 100%;
+}
+
+article{
+    margin-top: 10px;
+}
+
+section{
+	margin: 20px;
+}
+
+#philosophy h2,#merit h2,.messages h2,#positions h2{
+    border-left: 3px solid #3777FF;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+#philosophy h1{
+    font-size: 20px;
+}
+
+.messagebox{
+	display: flex;
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+.imgMembers{
+    position: relative;
+    top: -5px;
+    left: -5px;
+    width: 165px;
+    height: 165px;
+}
+
+.imgB{
+    background: #DAB300;
+    width: 165px;
+    height: 165px;
+}
+
+.messages section h1{
+    font-size: 16px;
+    padding-left: 10px;
+		padding-bottom: 10px;
+}
+		
+.messages section h2{
+    border-left: none;
+		padding-bottom: 10px;
+}
+
+.messages section p{
+		padding-bottom: 10px;
+}
+
+.messagebox p{
+    margin: auto;
+    width: 140px;
+}
+
+#acMenu dt{
+    display:block;
+    cursor:pointer;
+    margin: 10px 20px 10px;
+}
+
+#acMenu dd{
+    display:none;
+    margin: 10px 40px 10px;
+}
+
+#entryBox{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#entry{
+    background: #DAB300;
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: inline-block;
+    padding:5px 10px;
+    box-shadow: 0 5px 4px rgba(0,0,0,0.3);
+    transition: .3s;
+}
+
+#entry a{
+    color: #fff;
+}
+
+#entry:hover {
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+footer{
+    background:#E0E0E0;
+    font-size: 12px;
+    line-height: 30px;
+    text-align:center;
+}
+
+footer #localnav ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer #localnav ul li{
+    padding-top: 10px;
+    width: 112.7px;
+}
+
+footer #localnav ul li:first-child{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+footer #localnav ul li:last-child a{
+    border-left: 1px solid #000;
+    height: 12px;
+    padding-left: 20px;
+}
+
+.btnEntry{
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    background: #DAB300;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.btnEntry a{
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+/*エントリーページ*/
+.entrypage header{
+    height: 55px;
+}
+
+.entrypage h1{
+    font-size: 20px;
+}
+
+.entrypage p{
+    font-size: 12px;
+    margin-bottom: 10px
+}
+
+.entrypage span{
+    color: #3777FF;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.entrypage section{
+    margin: 0 auto 90px;;
+		width: 90%;
+}
+
+.entrypage section dt{
+    width: 38%;
+}
+
+.entrypage table, td{
+	border: 1px solid #ccc;
+}
+
+.entrypage table td{
+	padding: 10px;
+	text-align: center;
+}
+
+.entrypage main section dd{
+	margin: -2em 0 30px 9em;
+}
+
+.entrypage input[type="submit"],.entrypage input[type="button"]{
+	margin-bottom: 30px;
+	border-radius: 5px;
+}
+
+.entrypage label{
+margin-right:30px;
+}
+
+.entrypage.error{
+	color:#c00;
+}
+
+.entrypage footer{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
+
+/*タブレット用スタイル*/
+@media screen and (min-width:600px){
+    header{
+        height: 70px;
+    }
+    
+    header h1{
+        margin-top: 20px;
+        padding-left: 20px;
+        width: 125px;
+        height: 30px;
+    }
+    
+    .btnEntry{
+        top: 15px;
+        right: 70px;
+    }
+    
+    #entryButton{
+        display: block !important;
+    }
+    
+    /*ハンバーガーメニュークリック前*/
+    /* クリックエリアと位置を指定 ---------------------- */
+    .btnHamburger {
+        top: 25px;
+  	    right: 20px;
+    }
+    
+    .inner{
+        margin-top: 60%;
+        padding-right:50px;
+        padding-left: 50px;
+        background: #fff;
+    }
+    
+    #top_main p{
+        right: 10%;
+        top: 14%;
+}
+    
+    article{
+        margin-top: 20px;
+}
+
+    article::before{
+        content: "";
+        display: block;
+        height: 70px;
+    }
+
+    section{
+	    margin: 20px;
+    }
+    
+    .messagebox{
+        padding: 30px 30px 30px 25px;
+    }
+    
+    .messagebox p{
+        margin-left: 40px;
+        width: auto;
+    }
+    
+    .btnEntry{
+        z-index: 3;
+    }
+
+    .entrypage header{
+        height: 70px;
+    }
+    
+    .entrypage section{
+        width: 80%;
+    }
+
+    .entrypage main section dd{
+	    margin: -2em 0 30px 15em;
+    }
+}
+
+/*PC用スタイル*/
+@media screen and (min-width:960px){
+	#wrapper{
+		display: flex;
+		flex-wrap: wrap;
+	}
+    
+    .inner{
+        margin-top: 60%;
+        padding-right:200px;
+        padding-left: 200px;
+        background: #fff;
+    }
+
+	nav{
+        position:fixed;
+        top: 25px;
+        right: 470px;
+		opacity: 1;
+	}
+    
+    nav ul{
+        display: flex;        
+    }
+    
+    nav ul li a{
+        line-height: 1.5;
+        width: 130px;
+        height: 40px;
+    }
+    
+    nav ul li a:hover{
+        color: #F3A26B;
+    }
+    
+    #top_main p{
+        
+        right: 12%;
+        top: 18%;
+}
+
+    .outline {
+        font-size: 60px;
+}
+    
+    .messagebox{
+        padding: 30px 30px 30px 25px;
+    }
+    
+    .messagebox p{
+        margin-left: 10%;
+        width: auto;
+    }
+    
+    footer{
+        width: 100%;
+    }
+
+	.btnHamburger,#coverlayer{
+	    display: none;
+	}
+    
+    .btnEntry{
+        z-index: 3;
+        top: 15px;
+        right: 1.78%;
+    }
+    
+    .entrypage main{
+        width: 100%;
+    }
+    
+    .entrypage section{
+        width: 70%;
+    }
+    
+    .entrypage main section dd{
+	    margin: -2em 0 30px 20em;
+    }
+}

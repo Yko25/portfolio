@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TracKeys | エントリーページ</title>
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--TOPに戻るボタン-->
+<script>
+$(document).ready(function() {
+  var pagetop = $('.pagetop');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});
+</script>
+
+<!--nav背景-->
+<script>
+$(document).ready(function() {
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 30) {
+            $('header').addClass('backc');
+       } else {
+            $('header').removeClass('backc');
+            }
+       });
+});
+</script>
+
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/messages_ja.js"></script>
+<script>
+    $(document).ready(function(){
+    	$('#entrypage').validate();
+    });
+</script>
+
+<script type="text/javascript" src="js/ajaxzip3.js"></script>
+</head>
+
+<body class="entrypage">
+<div id="wrapper">
+    <header>
+        <h1><a href="index.html"><img src="images/logo.svg" alt="TracKeys（トラッキーズ）ロゴ"/></a></h1>
+    </header>
+    <main>
+    <article>
+        <section>
+            <h1>エントリー（入力画面）</h1>
+            <p>TracKeysへの入社をご希望の方は、必要事項を入力の上、ご応募ください。（*は必須入力）</p>
+        <form action="check.php" method="post" id="entrypage">
+            <dl>
+            <dt>応募職種<span> *</span></dt>
+                <dd>
+                <select name="position" id="position" autofocus="autofocus" required>
+                <option selected="selected">選択してください</option>
+                <option value="キャリアアドバイザー">キャリアアドバイザー</option>
+                <option value="リクルーティングアドバイザー">リクルーティングアドバイザー</option>
+                <option value="カスタマーサービススタッフ">カスタマーサービススタッフ</option>
+                <option value="マーケティングスタッフ">マーケティングスタッフ</option>
+                </select>
+                </dd>
+            <dt>応募種別<span> *</span></dt>
+                <dd>
+                <select name="class" id="class" required>
+                <option selected="selected">選択してください</option>
+                <option value="中途採用">中途採用</option>
+                <option value="新卒採用">新卒採用</option>
+                </select>
+                </dd>
+            <dt>お名前（漢字）<span> *</span></dt>
+                <dd>
+                <input type="text" size="30" name="name" required>
+                </dd>
+            <dt>お名前（ふりがな）</dt>
+                <dd>
+                <input type="text" size="30" name="furigana">
+                </dd>
+            <dt>E-mail<span> *</span></dt>
+                <dd><input type="email" size="30" name="email1" required></dd>
+            <dt>E-mail（確認）<span> *</span></dt>
+                <dd><input type="email" size="30" name="email2" required></dd>
+            <dt>電話番号</dt>
+                <dd><input type="text" size="30" name="tel"></dd>
+            <dt>履歴書<span> *PDF</span></dt>
+                <dd><input type="file" name="fUlResume" id="fUlResume" required></dd>
+            <dt>職務経歴書<span> *PDF</span></dt>
+                <dd><input type="file" name="fUlExperience" id="fUlExperience" required></dd>
+            <input type="submit" value="入力内容確認">
+            </dl>
+        </form>
+        </section>
+    </article>
+    </main>
+    <footer>
+        <div id="localnav">
+            <ul>
+            <li><a href="#">会社概要</a></li>
+            <li><a href="#">TracKeysサイト</a></li>
+            </ul>
+        </div>
+        <div id="cr"><small>© TracKeys inc. All rights reserved.</small></div>
+    </footer>
+	    <p class="pagetop"><a href="#top"><img src="images/arrows.svg" alt="トップに戻るボタン"/></a></p>
+</div>
+</body>
+</html>
