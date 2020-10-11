@@ -414,6 +414,7 @@ footer{
 
 #work .modalArea main section{
     padding-top: initial;
+    padding-top: 30px;
 }
 
 .modalArea .logo{
@@ -548,6 +549,19 @@ footer{
 
 .modalArea3 .colorBox .box3{
     background: #707070;
+}
+
+/*Portfolio*/
+.modalArea4 .colorBox .box1{
+    background: #FCE7D7;
+}
+
+.modalArea4 .colorBox .box2{
+    background: #707070;
+}
+.modalArea4 .colorBox .box3{
+    background: #fff;
+    border: 1px solid #707070;
 }
 
 #work footer{
@@ -972,6 +986,10 @@ footer{
         .modalArea main p{
             margin-left: 50px;
         }
+        
+        .modalArea main .colorBox p{
+            margin-left: 0;
+        }        
         
         footer{
             padding-top: 100px;
